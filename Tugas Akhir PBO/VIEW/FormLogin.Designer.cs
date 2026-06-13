@@ -33,102 +33,130 @@
             UsernameBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
             LoginButton = new Button();
             button1 = new Button();
-            JConsoleDaftar = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // PasswordBox
             // 
-            PasswordBox.Location = new Point(270, 247);
+            PasswordBox.Location = new Point(559, 323);
+            PasswordBox.Margin = new Padding(3, 2, 3, 2);
             PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(249, 27);
+            PasswordBox.Size = new Size(218, 23);
             PasswordBox.TabIndex = 0;
             PasswordBox.UseSystemPasswordChar = true;
+            PasswordBox.TextChanged += PasswordBox_TextChanged;
             // 
             // UsernameBox
             // 
-            UsernameBox.Location = new Point(270, 193);
+            UsernameBox.Location = new Point(559, 261);
+            UsernameBox.Margin = new Padding(3, 2, 3, 2);
             UsernameBox.Name = "UsernameBox";
-            UsernameBox.Size = new Size(248, 27);
+            UsernameBox.Size = new Size(218, 23);
             UsernameBox.TabIndex = 1;
+            UsernameBox.TextChanged += UsernameBox_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(272, 171);
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Green;
+            label1.Location = new Point(559, 236);
             label1.Name = "label1";
-            label1.Size = new Size(75, 20);
+            label1.Size = new Size(58, 14);
             label1.TabIndex = 2;
             label1.Text = "Username";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(272, 224);
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Green;
+            label2.Location = new Point(562, 296);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(54, 14);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(270, 96);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(247, 62);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
             // LoginButton
             // 
-            LoginButton.Location = new Point(425, 302);
+            LoginButton.BackColor = Color.White;
+            LoginButton.BackgroundImage = (Image)resources.GetObject("LoginButton.BackgroundImage");
+            LoginButton.BackgroundImageLayout = ImageLayout.Zoom;
+            LoginButton.FlatAppearance.BorderSize = 0;
+            LoginButton.FlatStyle = FlatStyle.Flat;
+            LoginButton.Location = new Point(637, 356);
+            LoginButton.Margin = new Padding(3, 2, 3, 2);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(94, 29);
+            LoginButton.Size = new Size(140, 39);
             LoginButton.TabIndex = 5;
-            LoginButton.Text = "Login";
-            LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.UseVisualStyleBackColor = false;
             LoginButton.Click += LoginButton_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(272, 302);
+            button1.BackColor = Color.White;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(559, 356);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(72, 39);
             button1.TabIndex = 6;
-            button1.Text = "Register";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // JConsoleDaftar
+            // pictureBox5
             // 
-            JConsoleDaftar.AutoSize = true;
-            JConsoleDaftar.Font = new Font("Inter Tight", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            JConsoleDaftar.Location = new Point(12, 9);
-            JConsoleDaftar.Name = "JConsoleDaftar";
-            JConsoleDaftar.Size = new Size(58, 26);
-            JConsoleDaftar.TabIndex = 7;
-            JConsoleDaftar.Text = "Login";
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(-1, -4);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(431, 577);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 11;
+            pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.Transparent;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(391, -4);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(557, 577);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 12;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(JConsoleDaftar);
-            Controls.Add(button1);
+            ClientSize = new Size(901, 565);
             Controls.Add(LoginButton);
-            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox5);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(UsernameBox);
             Controls.Add(PasswordBox);
+            Controls.Add(pictureBox6);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormLogin";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += FormLogin_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,9 +167,9 @@
         private TextBox UsernameBox;
         private Label label1;
         private Label label2;
-        private PictureBox pictureBox1;
         private Button LoginButton;
         private Button button1;
-        private Label JConsoleDaftar;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
     }
 }

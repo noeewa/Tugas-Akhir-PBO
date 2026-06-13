@@ -47,5 +47,25 @@ namespace Tugas_Akhir_PBO.VIEW
 
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VerifPasswordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

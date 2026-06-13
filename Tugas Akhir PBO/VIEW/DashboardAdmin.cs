@@ -126,5 +126,15 @@ namespace Tugas_Akhir_PBO.VIEW
                 this.Show();
             }
         }
+
+        private void HapusMitra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelLinkPeminjaman_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
