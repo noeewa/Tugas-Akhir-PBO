@@ -12,7 +12,7 @@ namespace Tugas_Akhir_PBO
         public FormLogin()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Gambar\Background Hijau.png")
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Gambar\Background Hijau.png");
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
