@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
 
-public partial class Peminjam
+public partial class Peminjam : Abstarct_User
 {
-    public int IdPeminjam { get; set; }
+    public int Id { get; set; }
 
-    public string NamaPeminjam { get; set; } = null!;
+    public string Nama { get; set; } = null!;
 
     public string? Alamat { get; set; }
 
@@ -21,7 +21,7 @@ public partial class Peminjam
         {
             Peminjam peminjam = new Peminjam()
             {
-                IdPeminjam = IdPeminjam,
+                Id = Id,
                 Alamat = Alamat
             };
             db.Peminjams.Add(peminjam);
@@ -34,7 +34,7 @@ public partial class Peminjam
         {
             // 1. Ambil semua IdPeminjam langsung sebagai angka, urutkan dari terkecil
             var allIds = db.Peminjams
-                           .Select(p => p.IdPeminjam)
+                           .Select(p => p.Id)
                            .OrderBy(id => id)
                            .ToList();
 

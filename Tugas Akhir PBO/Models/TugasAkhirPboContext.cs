@@ -43,16 +43,16 @@ public partial class TugasAkhirPboContext : DbContext
     {
         modelBuilder.Entity<Admin>(entity =>
         {
-            entity.HasKey(e => e.IdAdmin).HasName("admins_pkey");
+            entity.HasKey(e => e.Id).HasName("admins_pkey");
 
             entity.ToTable("admins");
 
-            entity.Property(e => e.IdAdmin).HasColumnName("id_admin");
+            entity.Property(e => e.Id).HasColumnName("id_admin");
             entity.Property(e => e.Alamat).HasColumnName("alamat");
             entity.Property(e => e.Kontak)
                 .HasMaxLength(20)
                 .HasColumnName("kontak");
-            entity.Property(e => e.NamaAdmin)
+            entity.Property(e => e.Nama)
                 .HasMaxLength(100)
                 .HasColumnName("nama_admin");
         });
@@ -137,11 +137,11 @@ public partial class TugasAkhirPboContext : DbContext
 
         modelBuilder.Entity<Mitra>(entity =>
         {
-            entity.HasKey(e => e.IdMitra).HasName("mitra_pkey");
+            entity.HasKey(e => e.Id).HasName("mitra_pkey");
 
             entity.ToTable("mitra");
 
-            entity.Property(e => e.IdMitra).HasColumnName("id_mitra");
+            entity.Property(e => e.Id).HasColumnName("id_mitra");
             entity.Property(e => e.Alamat).HasColumnName("alamat");
             entity.Property(e => e.Deskripsi).HasColumnName("deskripsi");
             entity.Property(e => e.JenisMitra)
@@ -150,23 +150,23 @@ public partial class TugasAkhirPboContext : DbContext
             entity.Property(e => e.Kontak)
                 .HasMaxLength(20)
                 .HasColumnName("kontak");
-            entity.Property(e => e.NamaMitra)
+            entity.Property(e => e.Nama)
                 .HasMaxLength(150)
                 .HasColumnName("nama_mitra");
         });
 
         modelBuilder.Entity<Peminjam>(entity =>
         {
-            entity.HasKey(e => e.IdPeminjam).HasName("peminjam_pkey");
+            entity.HasKey(e => e.Id).HasName("peminjam_pkey");
 
             entity.ToTable("peminjam");
 
-            entity.Property(e => e.IdPeminjam).HasColumnName("id_peminjam");
+            entity.Property(e => e.Id).HasColumnName("id_peminjam");
             entity.Property(e => e.Alamat).HasColumnName("alamat");
             entity.Property(e => e.Kontak)
                 .HasMaxLength(20)
                 .HasColumnName("kontak");
-            entity.Property(e => e.NamaPeminjam)
+            entity.Property(e => e.Nama)
                 .HasMaxLength(100)
                 .HasColumnName("nama_peminjam");
         });
@@ -262,38 +262,38 @@ public partial class TugasAkhirPboContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.IdUser).HasName("users_pkey");
+            entity.HasKey(e => e.Id).HasName("users_pkey");
 
             entity.ToTable("users");
 
-            entity.Property(e => e.IdUser)
+            entity.Property(e => e.Id)
                 .HasMaxLength(50)
                 .HasColumnName("id_user");
-            entity.Property(e => e.Email)
+            entity.Property(e => e.Emails)
                 .HasMaxLength(150)
                 .HasColumnName("email");
-            entity.Property(e => e.IdAdmin).HasColumnName("id_admin");
-            entity.Property(e => e.IdMitra).HasColumnName("id_mitra");
-            entity.Property(e => e.IdPeminjam).HasColumnName("id_peminjam");
-            entity.Property(e => e.Password)
+            entity.Property(e => e.Id).HasColumnName("id_admin");
+            entity.Property(e => e.Id).HasColumnName("id_mitra");
+            entity.Property(e => e.Id).HasColumnName("id_peminjam");
+            entity.Property(e => e.Pass)
                 .HasMaxLength(255)
                 .HasColumnName("password");
-            entity.Property(e => e.Username)
+            entity.Property(e => e.Nama)
                 .HasMaxLength(100)
                 .HasColumnName("username");
 
             entity.HasOne(d => d.IdAdminNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.IdAdmin)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("fk_users_admin");
 
             entity.HasOne(d => d.IdMitraNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.IdMitra)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("fk_users_mitra");
 
             entity.HasOne(d => d.IdPeminjamNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.IdPeminjam)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("fk_users_peminjam");
         });

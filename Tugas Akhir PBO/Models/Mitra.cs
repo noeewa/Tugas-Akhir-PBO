@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
+using System;
 using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
 
-public partial class Mitra
+public partial class Mitra : Abstarct_User
 {
-    public int IdMitra { get; set; }
+    public int Id { get; set; }
 
-    public string? NamaMitra { get; set; }
+    public string? Nama { get; set; }
 
     public string? JenisMitra { get; set; }
 
@@ -34,7 +35,7 @@ public partial class Mitra
         {
             // 1. Ambil semua id_mitra langsung sebagai angka, urutkan dari yang terkecil
             var allIds = db.Mitras
-                           .Select(m => m.IdMitra)
+                           .Select(m => m.Id)
                            .OrderBy(id => id)
                            .ToList();
 
@@ -68,8 +69,8 @@ public partial class Mitra
             return db.Mitras.Select(u => new
             {
                 // Tentukan kolom apa saja yang ingin diambil di sini:
-                u.IdMitra,
-                u.NamaMitra,
+                u.Id,
+                u.Nama,
                 u.Alamat,
                 u.Alats,
                 u.Deskripsi,
@@ -104,8 +105,8 @@ public partial class Mitra
         {
             Mitra mitra = new Mitra
             {
-                IdMitra = IdMitra,
-                NamaMitra = NamaMitra,
+                Id = IdMitra,
+                Nama = NamaMitra,
                 JenisMitra = JenisMitra,
                 Alamat = Alamat,
                 Kontak = Kontak,

@@ -5,19 +5,19 @@ namespace Tugas_Akhir_PBO.Models;
 
 public partial class User
 {
-    public string IdUser { get; set; } = null!;
+    private string IdUser { get; set; } = null!;
 
-    public string? Username { get; set; }
+    private string? Username { get; set; }
 
-    public string? Email { get; set; }
+    private string? Email { get; set; }
 
-    public string? Password { get; set; }
+    private string? Password { get; set; }
 
-    public int? IdAdmin { get; set; }
+    private int? IdAdmin { get; set; }
 
-    public int? IdMitra { get; set; }
+    private int? IdMitra { get; set; }
 
-    public int? IdPeminjam { get; set; }
+    private int? IdPeminjam { get; set; }
 
     public virtual Admin? IdAdminNavigation { get; set; }
 
@@ -29,6 +29,26 @@ public partial class User
 
     public virtual ICollection<Riwayat> Riwayats { get; set; } = new List<Riwayat>();
 
+    public string Id
+    {
+        get { return this.IdUser; }
+        set { IdUser = value; }
+    }
+    public string Nama
+    {
+        get { return Username; }
+        set { Username = value; }
+    }
+    public string Pass
+    {
+        get { return Password; }
+        set { Password = value; }
+    }
+    public string Emails
+    {
+        get { return Email; }
+        set { Email = value; }
+    }
     public User getUser(string username, string password)
     {
         using (var db = new TugasAkhirPboContext())

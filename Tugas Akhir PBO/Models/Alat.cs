@@ -29,7 +29,7 @@ public partial class Alat
     {
         using (var db = new TugasAkhirPboContext())
         {
-            return db.Admins.FirstOrDefault(u => u.IdAdmin == id_admin);
+            return db.Admins.FirstOrDefault(u => u.Id == id_admin);
         }
     }
 
