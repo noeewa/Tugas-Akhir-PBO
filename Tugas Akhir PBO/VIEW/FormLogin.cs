@@ -24,10 +24,10 @@ namespace Tugas_Akhir_PBO
             }
 
             User user = UseController.formLogin(UsernameBox.Text, PasswordBox.Text);
-            if (user != null && string.IsNullOrEmpty(user.Username))
+            if (user != null && string.IsNullOrEmpty(user.Nama))
             {
                
-                MessageBox.Show($"username: {user.Username}");
+                MessageBox.Show($"username: {user.Nama}");
             }
             if (user == null)
             {
@@ -35,7 +35,7 @@ namespace Tugas_Akhir_PBO
                 return;
             }
 
-            MessageBox.Show("Selamat datang, " + user.Username);
+            MessageBox.Show("Selamat datang, " + user.Nama);
             this.Hide();
 
             if (user.IdAdmin > 0)

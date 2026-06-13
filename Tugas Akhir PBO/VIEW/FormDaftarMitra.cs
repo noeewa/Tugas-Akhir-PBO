@@ -30,7 +30,7 @@ namespace Tugas_Akhir_PBO.VIEW
         {
             Mitra regisMitra = new Mitra()
             {
-                NamaMitra = NamaBox.Text,
+                Nama = NamaBox.Text,
                 JenisMitra = JenisBox.Text,
                 Alamat = AlamatTextBox.Text,
                 Deskripsi = DeskripsiBox.Text,

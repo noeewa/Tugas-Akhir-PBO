@@ -33,8 +33,8 @@ namespace Tugas_Akhir_PBO.CONTROLLER
         {
 
             mitra.insertMitra();
-            new User().MitraUpdateUserById(mitra.IdMitra, idUser);
-            MessageBox.Show($"Mitra {mitra.NamaMitra} Berhasil Ditambah");
+            new User().MitraUpdateUserById(mitra.Id, idUser);
+            MessageBox.Show($"Mitra {mitra.Nama} Berhasil Ditambah");
             return mitra;
         }
     }

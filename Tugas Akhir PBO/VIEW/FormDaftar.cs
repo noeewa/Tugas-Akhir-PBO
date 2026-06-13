@@ -28,7 +28,7 @@ namespace Tugas_Akhir_PBO.VIEW
 
         private void button0_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(NamaBox.Text) || string.IsNullOrEmpty(EmailBox.Text) || string.IsNullOrEmpty(PasswordBox.Text) || string.IsNullOrEmpty(AlamatTextBox.Text))
+            if (string.IsNullOrEmpty(NamaBox.Text) || string.IsNullOrEmpty(EmailBox.Text) || string.IsNullOrEmpty(PasswordBox.Text))
             {
                 MessageBox.Show("Semua field harus diisi!");
                 return;
@@ -36,9 +36,9 @@ namespace Tugas_Akhir_PBO.VIEW
 
             User user = new User()
             {
-                Username = NamaBox.Text,
-                Email = EmailBox.Text,
-                Password = PasswordBox.Text,
+                Nama = NamaBox.Text,
+                Emails = EmailBox.Text,
+                Pass = PasswordBox.Text,
             };
 
             UseController.formDaftarPeminjam(user);

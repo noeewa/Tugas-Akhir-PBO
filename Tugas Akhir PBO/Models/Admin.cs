@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tugas_Akhir_PBO.Models;
 
@@ -20,6 +22,14 @@ public partial class Admin : Abstarct_User
         using (var db = new TugasAkhirPboContext())
         {
             db.Admins.Add(this);
+        }
+    }
+    public Admin getAdmin(int id)
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            Admin user = db.Admins.Find(id);
+            return user;
         }
     }
 }

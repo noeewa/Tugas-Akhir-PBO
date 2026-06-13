@@ -22,7 +22,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
             }
             else
             {
-                UserSession.UserId = user.IdUser;
+                UserSession.UserId = user.Id;
                 UserSession.Username = user.Nama;
                 UserSession.IdMitra = user.IdMitra;
                 UserSession.IdAdmin = user.IdAdmin;
@@ -42,12 +42,10 @@ namespace Tugas_Akhir_PBO.CONTROLLER
 
             User userRegis = new User()
             {
-                IdUser = idUser,
+                Id = idUser,
                 Nama = user.Nama,
-                Email = user.Email,
-                Password = user.Password,
-                NoHp = user.NoHp,
-                Alamat = user.Alamat,
+                Emails = user.Emails,
+                Pass = user.Pass,
                 IdPeminjam = peminjamRegis.getLastId()
             };
 
@@ -60,7 +58,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
         {
             Admin admin = new Admin();
             admin.getAdmin(id_admin);
-            if (int.IsNegative(admin.IdAdmin))
+            if (int.IsNegative(admin.Id))
             {
                 return null;
             }

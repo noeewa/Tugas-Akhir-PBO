@@ -23,14 +23,16 @@ public partial class Peminjam : Abstarct_User
         }
     }
 
-    public void inputPeminjam(string Alamat)
+    public void inputPeminjam(string Nama, string Alamat, string Kontak)
     {
         using (var db = new TugasAkhirPboContext())
         {
             Peminjam peminjam = new Peminjam()
             {
                 Id = Id,
-                Alamat = Alamat
+                Nama = Nama,
+                Alamat = Alamat,
+                Kontak = Kontak
             };
             db.Peminjams.Add(peminjam);
             db.SaveChanges();

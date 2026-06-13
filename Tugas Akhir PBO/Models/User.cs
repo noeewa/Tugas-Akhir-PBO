@@ -13,11 +13,11 @@ public partial class User
 
     private string? Password { get; set; }
 
-    private int? IdAdmin { get; set; }
+    public int? IdAdmin { get; set; }
 
-    private int? IdMitra { get; set; }
+    public int? IdMitra { get; set; }
 
-    private int? IdPeminjam { get; set; }
+    public int? IdPeminjam { get; set; }
 
     public virtual Admin? IdAdminNavigation { get; set; }
 
@@ -93,10 +93,9 @@ public partial class User
         using (var db = new TugasAkhirPboContext())
         {
             return db.Users
-                // 1. Filter: Hanya ambil user yang memiliki IdPeminjam (bukan null dan bukan 0)
+             
                 .Where(u => u.IdPeminjam != null && u.IdPeminjam != 0)
 
-                // 2. Pilih kolom yang dibutuhkan
                 .Select(u => new
                 {
                     u.IdUser,
@@ -118,20 +117,19 @@ public partial class User
     {
         using (var db = new TugasAkhirPboContext())
         {
-            // 1. Ambil semua ID dari database dan urutkan dari yang terkecil (A-Z)
+   
             var allIds = db.Users
                            .Select(u => u.IdUser)
                            .OrderBy(id => id)
                            .ToList();
 
-            // 2. Jika database benar-benar kosong, maka ID pertama harus dimulai dari angka 0 
-            // (nanti saat ditambah 1 di fungsi insert akan menjadi "USR-001")
+      
             if (allIds.Count == 0)
             {
                 return 0;
             }
 
-            // 3. Ekstrak semua string ID menjadi daftar angka (integer)
+        
             List<int> daftarAngka = new List<int>();
             foreach (var id in allIds)
             {
@@ -141,23 +139,20 @@ public partial class User
                 }
             }
 
-            // 4. Cari angka yang hilang (celah kosong) mulai dari angka 1
+           
             int targetAngka = 1;
             foreach (int angkaAktif in daftarAngka)
             {
-                // Jika angka yang ada di database tidak sama dengan targetAngka kita,
-                // artinya targetAngka tersebut sedang "hilang/dihapus"
+             
                 if (angkaAktif != targetAngka)
                 {
-                    // Kembalikan (targetAngka - 1) karena di luar fungsi ini 
-                    // Anda akan menambahkannya dengan +1 lagi.
+         
                     return targetAngka - 1;
                 }
                 targetAngka++;
             }
 
-            // 5. Jika tidak ada angka yang bolong di tengah, 
-            // kembalikan angka tertinggi yang ada saat ini
+        
             return targetAngka - 1;
         }
     }
@@ -173,20 +168,16 @@ public partial class User
     {
         using (var db = new TugasAkhirPboContext())
         {
-            // 1. Cari user berdasarkan idUser
+   
             var user = db.Users.Find(idUser);
 
-            // 2. Validasi apakah user tersebut ditemukan
             if (user != null)
             {
-                // 3. Update properti id_mitra dengan nilai baru dari parameter
+         
                 user.IdMitra = idMitra;
-
-                // 4. Simpan perubahan ke database PostgreSQL
                 db.SaveChanges();
             }
 
-            // 5. Kembalikan objek user yang sudah ter-update (atau null jika tidak ketemu)
             return user;
         }
     }
