@@ -62,7 +62,7 @@
             dataGridUser.BackgroundColor = Color.White;
             dataGridUser.BorderStyle = BorderStyle.None;
             dataGridUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridUser.Location = new Point(321, 201);
+            dataGridUser.Location = new Point(317, 201);
             dataGridUser.Margin = new Padding(6, 4, 6, 4);
             dataGridUser.Name = "dataGridUser";
             dataGridUser.RowHeadersWidth = 51;
@@ -80,6 +80,7 @@
             dataGridMitra.RowHeadersWidth = 51;
             dataGridMitra.Size = new Size(631, 687);
             dataGridMitra.TabIndex = 3;
+            dataGridMitra.CellContentClick += dataGridMitra_CellContentClick;
             // 
             // UserAddButton
             // 
@@ -213,9 +214,9 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(6, 6, 6, 6);
+            pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(286, 1233);
+            pictureBox1.Size = new Size(286, 1067);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
@@ -223,20 +224,21 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(258, 0);
-            pictureBox2.Margin = new Padding(6, 6, 6, 6);
+            pictureBox2.Location = new Point(244, 0);
+            pictureBox2.Margin = new Padding(6);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1439, 1207);
+            pictureBox2.Size = new Size(1439, 1087);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 36;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // DashboardAdmin
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1673, 1205);
+            ClientSize = new Size(1673, 1113);
             Controls.Add(linkLabel1);
             Controls.Add(linkLabel4);
             Controls.Add(LabelLinkBarang);

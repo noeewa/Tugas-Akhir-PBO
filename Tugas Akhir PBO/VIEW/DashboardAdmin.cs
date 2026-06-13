@@ -136,5 +136,15 @@ namespace Tugas_Akhir_PBO.VIEW
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridMitra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
