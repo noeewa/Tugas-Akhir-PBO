@@ -36,9 +36,9 @@ namespace Tugas_Akhir_PBO.VIEW
 
             User user = new User()
             {
-                Username = NamaBox.Text,
-                Email = EmailBox.Text,
-                Password = PasswordBox.Text,
+                Nama = NamaBox.Text,
+                Emails = EmailBox.Text,
+                Pass = PasswordBox.Text,
             };
 
             UseController.formDaftarPeminjam(user);
