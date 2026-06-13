@@ -14,4 +14,12 @@ public partial class Admin : Abstarct_User
     public string? Kontak { get; set; }
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
+
+    public override void insert()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            db.Admins.Add(this);
+        }
+    }
 }

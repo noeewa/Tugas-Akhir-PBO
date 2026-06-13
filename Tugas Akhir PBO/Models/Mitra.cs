@@ -22,6 +22,14 @@ public partial class Mitra : Abstarct_User
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 
+    public override void insert()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            db.Mitras.Add(this);
+        }
+    }
+
     public List<Mitra> GetAllMitra()
     {
         using (var db = new TugasAkhirPboContext())

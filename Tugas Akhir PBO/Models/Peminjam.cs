@@ -15,6 +15,14 @@ public partial class Peminjam : Abstarct_User
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 
+    public override void insert()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            db.Peminjams.Add(this);
+        }
+    }
+
     public void inputPeminjam(string Alamat)
     {
         using (var db = new TugasAkhirPboContext())
