@@ -52,8 +52,9 @@
             // label1
             // 
             label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(88, 17);
+            label1.Size = new Size(163, 36);
             label1.TabIndex = 0;
             // 
             // dataGridUser
@@ -61,11 +62,11 @@
             dataGridUser.BackgroundColor = Color.White;
             dataGridUser.BorderStyle = BorderStyle.None;
             dataGridUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridUser.Location = new Point(173, 94);
-            dataGridUser.Margin = new Padding(3, 2, 3, 2);
+            dataGridUser.Location = new Point(321, 201);
+            dataGridUser.Margin = new Padding(6, 4, 6, 4);
             dataGridUser.Name = "dataGridUser";
             dataGridUser.RowHeadersWidth = 51;
-            dataGridUser.Size = new Size(344, 334);
+            dataGridUser.Size = new Size(639, 713);
             dataGridUser.TabIndex = 2;
             // 
             // dataGridMitra
@@ -73,11 +74,11 @@
             dataGridMitra.BackgroundColor = Color.White;
             dataGridMitra.BorderStyle = BorderStyle.None;
             dataGridMitra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridMitra.Location = new Point(539, 94);
-            dataGridMitra.Margin = new Padding(3, 2, 3, 2);
+            dataGridMitra.Location = new Point(1001, 201);
+            dataGridMitra.Margin = new Padding(6, 4, 6, 4);
             dataGridMitra.Name = "dataGridMitra";
             dataGridMitra.RowHeadersWidth = 51;
-            dataGridMitra.Size = new Size(340, 322);
+            dataGridMitra.Size = new Size(631, 687);
             dataGridMitra.TabIndex = 3;
             // 
             // UserAddButton
@@ -86,10 +87,10 @@
             UserAddButton.BackgroundImageLayout = ImageLayout.Zoom;
             UserAddButton.FlatAppearance.BorderSize = 0;
             UserAddButton.FlatStyle = FlatStyle.Flat;
-            UserAddButton.Location = new Point(271, 432);
-            UserAddButton.Margin = new Padding(3, 2, 3, 2);
+            UserAddButton.Location = new Point(503, 922);
+            UserAddButton.Margin = new Padding(6, 4, 6, 4);
             UserAddButton.Name = "UserAddButton";
-            UserAddButton.Size = new Size(84, 34);
+            UserAddButton.Size = new Size(156, 73);
             UserAddButton.TabIndex = 5;
             UserAddButton.UseVisualStyleBackColor = true;
             UserAddButton.Click += UserAddButton_Click;
@@ -100,10 +101,10 @@
             DeleteUserButton.BackgroundImageLayout = ImageLayout.Zoom;
             DeleteUserButton.FlatAppearance.BorderSize = 0;
             DeleteUserButton.FlatStyle = FlatStyle.Flat;
-            DeleteUserButton.Location = new Point(184, 432);
-            DeleteUserButton.Margin = new Padding(3, 2, 3, 2);
+            DeleteUserButton.Location = new Point(342, 922);
+            DeleteUserButton.Margin = new Padding(6, 4, 6, 4);
             DeleteUserButton.Name = "DeleteUserButton";
-            DeleteUserButton.Size = new Size(81, 34);
+            DeleteUserButton.Size = new Size(150, 73);
             DeleteUserButton.TabIndex = 7;
             DeleteUserButton.UseVisualStyleBackColor = true;
             DeleteUserButton.Click += DeleteUserButton_Click;
@@ -114,10 +115,10 @@
             HapusMitra.BackgroundImageLayout = ImageLayout.Zoom;
             HapusMitra.FlatAppearance.BorderSize = 0;
             HapusMitra.FlatStyle = FlatStyle.Flat;
-            HapusMitra.Location = new Point(546, 432);
-            HapusMitra.Margin = new Padding(3, 2, 3, 2);
+            HapusMitra.Location = new Point(1014, 922);
+            HapusMitra.Margin = new Padding(6, 4, 6, 4);
             HapusMitra.Name = "HapusMitra";
-            HapusMitra.Size = new Size(81, 34);
+            HapusMitra.Size = new Size(150, 73);
             HapusMitra.TabIndex = 9;
             HapusMitra.UseVisualStyleBackColor = true;
             HapusMitra.Click += HapusMitra_Click;
@@ -128,10 +129,10 @@
             DaftarMitra.BackgroundImageLayout = ImageLayout.Zoom;
             DaftarMitra.FlatAppearance.BorderSize = 0;
             DaftarMitra.FlatStyle = FlatStyle.Flat;
-            DaftarMitra.Location = new Point(638, 432);
-            DaftarMitra.Margin = new Padding(3, 2, 3, 2);
+            DaftarMitra.Location = new Point(1185, 922);
+            DaftarMitra.Margin = new Padding(6, 4, 6, 4);
             DaftarMitra.Name = "DaftarMitra";
-            DaftarMitra.Size = new Size(83, 34);
+            DaftarMitra.Size = new Size(154, 73);
             DaftarMitra.TabIndex = 8;
             DaftarMitra.UseVisualStyleBackColor = true;
             DaftarMitra.Click += DaftarMitra_Click;
@@ -143,9 +144,10 @@
             LabelLinkBarang.DisabledLinkColor = Color.White;
             LabelLinkBarang.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LabelLinkBarang.LinkColor = Color.White;
-            LabelLinkBarang.Location = new Point(12, 78);
+            LabelLinkBarang.Location = new Point(22, 166);
+            LabelLinkBarang.Margin = new Padding(6, 0, 6, 0);
             LabelLinkBarang.Name = "LabelLinkBarang";
-            LabelLinkBarang.Size = new Size(29, 14);
+            LabelLinkBarang.Size = new Size(53, 29);
             LabelLinkBarang.TabIndex = 10;
             LabelLinkBarang.TabStop = true;
             LabelLinkBarang.Text = "Alat";
@@ -158,9 +160,10 @@
             LabelLinkPeminjaman.DisabledLinkColor = Color.White;
             LabelLinkPeminjaman.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LabelLinkPeminjaman.LinkColor = Color.White;
-            LabelLinkPeminjaman.Location = new Point(13, 103);
+            LabelLinkPeminjaman.Location = new Point(24, 220);
+            LabelLinkPeminjaman.Margin = new Padding(6, 0, 6, 0);
             LabelLinkPeminjaman.Name = "LabelLinkPeminjaman";
-            LabelLinkPeminjaman.Size = new Size(75, 14);
+            LabelLinkPeminjaman.Size = new Size(137, 29);
             LabelLinkPeminjaman.TabIndex = 11;
             LabelLinkPeminjaman.TabStop = true;
             LabelLinkPeminjaman.Text = "Peminjaman";
@@ -173,9 +176,10 @@
             linkLabel1.DisabledLinkColor = Color.White;
             linkLabel1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(13, 165);
+            linkLabel1.Location = new Point(24, 352);
+            linkLabel1.Margin = new Padding(6, 0, 6, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(50, 14);
+            linkLabel1.Size = new Size(92, 29);
             linkLabel1.TabIndex = 12;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Riwayat";
@@ -183,9 +187,10 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(444, 16);
+            linkLabel2.Location = new Point(825, 34);
+            linkLabel2.Margin = new Padding(6, 0, 6, 0);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(0, 15);
+            linkLabel2.Size = new Size(0, 32);
             linkLabel2.TabIndex = 13;
             linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
@@ -196,9 +201,10 @@
             linkLabel4.DisabledLinkColor = Color.White;
             linkLabel4.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             linkLabel4.LinkColor = Color.White;
-            linkLabel4.Location = new Point(13, 134);
+            linkLabel4.Location = new Point(24, 286);
+            linkLabel4.Margin = new Padding(6, 0, 6, 0);
             linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(86, 14);
+            linkLabel4.Size = new Size(154, 29);
             linkLabel4.TabIndex = 15;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Pengembalian";
@@ -207,8 +213,9 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(6, 6, 6, 6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(154, 578);
+            pictureBox1.Size = new Size(286, 1233);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
@@ -216,19 +223,20 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(139, 0);
+            pictureBox2.Location = new Point(258, 0);
+            pictureBox2.Margin = new Padding(6, 6, 6, 6);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(775, 566);
+            pictureBox2.Size = new Size(1439, 1207);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 36;
             pictureBox2.TabStop = false;
             // 
             // DashboardAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(901, 565);
+            ClientSize = new Size(1673, 1205);
             Controls.Add(linkLabel1);
             Controls.Add(linkLabel4);
             Controls.Add(LabelLinkBarang);
@@ -243,7 +251,7 @@
             Controls.Add(dataGridUser);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(6, 4, 6, 4);
             Name = "DashboardAdmin";
             Text = "DashboardAdmin";
             Load += DashboardAdmin_Load;

@@ -32,10 +32,10 @@ namespace Tugas_Akhir_PBO.CONTROLLER
 
 
         }
-        public static User formDaftarPeminjam(User user)
+        public static User formDaftarPeminjam(User user, string Alamat, string Kontak)
         {
             Peminjam peminjamRegis = new Peminjam();
-            peminjamRegis.inputPeminjam(user.Alamat);
+            peminjamRegis.inputPeminjam(user.Nama, Alamat, Kontak);
 
             int last_id = user.getLastID();
             string idUser = "USR-" + last_id.ToString("D3");
