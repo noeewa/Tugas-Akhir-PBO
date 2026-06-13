@@ -47,6 +47,8 @@
             button2 = new Button();
             pictureBox1 = new PictureBox();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            textBox2 = new TextBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2ContainerControl1.SuspendLayout();
@@ -73,7 +75,7 @@
             // AlamatTextBox
             // 
             AlamatTextBox.BorderStyle = BorderStyle.FixedSingle;
-            AlamatTextBox.Location = new Point(464, 201);
+            AlamatTextBox.Location = new Point(452, 166);
             AlamatTextBox.Name = "AlamatTextBox";
             AlamatTextBox.Size = new Size(284, 57);
             AlamatTextBox.TabIndex = 33;
@@ -92,7 +94,7 @@
             // 
             labelVerifPassword.AutoSize = true;
             labelVerifPassword.BackColor = Color.White;
-            labelVerifPassword.Location = new Point(379, 203);
+            labelVerifPassword.Location = new Point(367, 168);
             labelVerifPassword.Name = "labelVerifPassword";
             labelVerifPassword.Size = new Size(76, 20);
             labelVerifPassword.TabIndex = 30;
@@ -195,10 +197,14 @@
             // 
             // guna2ContainerControl1
             // 
+            guna2ContainerControl1.Controls.Add(textBox2);
+            guna2ContainerControl1.Controls.Add(label2);
             guna2ContainerControl1.Controls.Add(textBox1);
             guna2ContainerControl1.Controls.Add(button2);
             guna2ContainerControl1.Controls.Add(button1);
+            guna2ContainerControl1.Controls.Add(AlamatTextBox);
             guna2ContainerControl1.Controls.Add(button0);
+            guna2ContainerControl1.Controls.Add(labelVerifPassword);
             guna2ContainerControl1.Controls.Add(label1);
             guna2ContainerControl1.CustomizableEdges = customizableEdges1;
             guna2ContainerControl1.Location = new Point(12, 80);
@@ -208,6 +214,25 @@
             guna2ContainerControl1.TabIndex = 42;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Location = new Point(452, 118);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(284, 27);
+            textBox2.TabIndex = 44;
+            textBox2.UseSystemPasswordChar = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Location = new Point(367, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(56, 20);
+            label2.TabIndex = 43;
+            label2.Text = "Status :";
+            // 
             // FormUpdateAlat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -216,9 +241,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(comboBox1);
-            Controls.Add(AlamatTextBox);
             Controls.Add(PasswordBox);
-            Controls.Add(labelVerifPassword);
             Controls.Add(labelPassword);
             Controls.Add(labelEmail);
             Controls.Add(labelPilih);
@@ -252,5 +275,7 @@
         private Button button2;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
+        private TextBox textBox2;
+        private Label label2;
     }
 }

@@ -7,7 +7,7 @@ public partial class Pengembalian
 {
     public string IdPengembalian { get; set; } = null!;
 
-    public string IdPeminjaman { get; set; } = null!;
+    public string? IdPeminjaman { get; set; }
 
     public DateOnly? TanggalPengembalian { get; set; }
 
@@ -15,7 +15,7 @@ public partial class Pengembalian
 
     public string? Denda { get; set; }
 
-    public virtual Peminjaman IdPeminjamanNavigation { get; set; } = null!;
+    public virtual Peminjaman? IdPeminjamanNavigation { get; set; }
 
     public virtual ICollection<Riwayat> Riwayats { get; set; } = new List<Riwayat>();
 
@@ -51,4 +51,5 @@ public partial class Pengembalian
             db.SaveChanges();
         }
     }
+
 }

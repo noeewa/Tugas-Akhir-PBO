@@ -7,7 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using Tugas_Akhir_PBO.CONTROLLER;
 using Tugas_Akhir_PBO.Models;
-using Tugas_Akhir_PBO.MODEL;
 
 namespace Tugas_Akhir_PBO.VIEW
 {

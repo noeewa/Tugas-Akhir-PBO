@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Tugas_Akhir_PBO.Models;
 
-namespace Tugas_Akhir_PBO.MODEL
+namespace Tugas_Akhir_PBO.CONTROLLER
 {
     public static class UserSession
     {

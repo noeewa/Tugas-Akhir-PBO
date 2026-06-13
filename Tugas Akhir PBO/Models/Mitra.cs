@@ -80,7 +80,7 @@ public partial class Mitra
             .ToList();
         }
     }
-    
+
     public Mitra GetMitraById(int idMitra)
     {
         using (var db = new TugasAkhirPboContext())

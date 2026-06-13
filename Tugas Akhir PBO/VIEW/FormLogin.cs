@@ -1,7 +1,6 @@
 using Microsoft.VisualBasic.Logging;
 using Npgsql;
 using Tugas_Akhir_PBO.CONTROLLER;
-using Tugas_Akhir_PBO.MODEL;
 using Tugas_Akhir_PBO.Models;
 using Tugas_Akhir_PBO.VIEW;
 
@@ -25,10 +24,10 @@ namespace Tugas_Akhir_PBO
             }
 
             User user = UseController.formLogin(UsernameBox.Text, PasswordBox.Text);
-            if (user != null && string.IsNullOrEmpty(user.Nama))
+            if (user != null && string.IsNullOrEmpty(user.Username))
             {
                
-                MessageBox.Show($"username: {user.Nama}");
+                MessageBox.Show($"username: {user.Username}");
             }
             if (user == null)
             {
@@ -36,7 +35,7 @@ namespace Tugas_Akhir_PBO
                 return;
             }
 
-            MessageBox.Show("Selamat datang, " + user.Nama);
+            MessageBox.Show("Selamat datang, " + user.Username);
             this.Hide();
 
             if (user.IdAdmin > 0)

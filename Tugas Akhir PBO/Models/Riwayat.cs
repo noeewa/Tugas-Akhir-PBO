@@ -7,17 +7,17 @@ public partial class Riwayat
 {
     public string IdRiwayat { get; set; } = null!;
 
-    public string IdUser { get; set; } = null!;
+    public string? IdUser { get; set; }
 
-    public string IdPengembalian { get; set; } = null!;
+    public string? IdPengembalian { get; set; }
 
-    public string IdPeminjaman { get; set; } = null!;
+    public string? IdPeminjaman { get; set; }
 
-    public virtual Peminjaman IdPeminjamanNavigation { get; set; } = null!;
+    public virtual Peminjaman? IdPeminjamanNavigation { get; set; }
 
-    public virtual Pengembalian IdPengembalianNavigation { get; set; } = null!;
+    public virtual Pengembalian? IdPengembalianNavigation { get; set; }
 
-    public virtual User IdUserNavigation { get; set; } = null!;
+    public virtual User? IdUserNavigation { get; set; }
 
     public List<Riwayat> GetAllRiwayat()
     {
@@ -50,4 +50,5 @@ public partial class Riwayat
             db.SaveChanges();
         }
     }
+
 }

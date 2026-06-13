@@ -33,14 +33,10 @@
             EmailBox = new TextBox();
             PasswordBox = new TextBox();
             VerifPasswordBox = new TextBox();
-            NomorHpBox = new TextBox();
             labelNama = new Label();
             labelEmail = new Label();
             labelPassword = new Label();
             labelVerifPassword = new Label();
-            labelNomorHp = new Label();
-            labelAlamat = new Label();
-            AlamatTextBox = new RichTextBox();
             button0 = new Button();
             button1 = new Button();
             SuspendLayout();
@@ -89,14 +85,6 @@
             VerifPasswordBox.TabIndex = 5;
             VerifPasswordBox.UseSystemPasswordChar = true;
             // 
-            // NomorHpBox
-            // 
-            NomorHpBox.BorderStyle = BorderStyle.FixedSingle;
-            NomorHpBox.Location = new Point(213, 283);
-            NomorHpBox.Name = "NomorHpBox";
-            NomorHpBox.Size = new Size(284, 27);
-            NomorHpBox.TabIndex = 6;
-            // 
             // labelNama
             // 
             labelNama.AutoSize = true;
@@ -133,33 +121,6 @@
             labelVerifPassword.TabIndex = 10;
             labelVerifPassword.Text = "Ulangi Password";
             // 
-            // labelNomorHp
-            // 
-            labelNomorHp.AutoSize = true;
-            labelNomorHp.Location = new Point(49, 283);
-            labelNomorHp.Name = "labelNomorHp";
-            labelNomorHp.Size = new Size(79, 20);
-            labelNomorHp.TabIndex = 11;
-            labelNomorHp.Text = "Nomor HP";
-            // 
-            // labelAlamat
-            // 
-            labelAlamat.AutoSize = true;
-            labelAlamat.Location = new Point(49, 337);
-            labelAlamat.Name = "labelAlamat";
-            labelAlamat.Size = new Size(57, 20);
-            labelAlamat.TabIndex = 13;
-            labelAlamat.Text = "Alamat";
-            // 
-            // AlamatTextBox
-            // 
-            AlamatTextBox.BorderStyle = BorderStyle.FixedSingle;
-            AlamatTextBox.Location = new Point(213, 337);
-            AlamatTextBox.Name = "AlamatTextBox";
-            AlamatTextBox.Size = new Size(284, 57);
-            AlamatTextBox.TabIndex = 14;
-            AlamatTextBox.Text = "";
-            // 
             // button0
             // 
             button0.Location = new Point(652, 393);
@@ -187,14 +148,10 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(button0);
-            Controls.Add(AlamatTextBox);
-            Controls.Add(labelAlamat);
-            Controls.Add(labelNomorHp);
             Controls.Add(labelVerifPassword);
             Controls.Add(labelPassword);
             Controls.Add(labelEmail);
             Controls.Add(labelNama);
-            Controls.Add(NomorHpBox);
             Controls.Add(VerifPasswordBox);
             Controls.Add(PasswordBox);
             Controls.Add(EmailBox);
@@ -213,14 +170,10 @@
         private TextBox EmailBox;
         private TextBox PasswordBox;
         private TextBox VerifPasswordBox;
-        private TextBox NomorHpBox;
         private Label labelNama;
         private Label labelEmail;
         private Label labelPassword;
         private Label labelVerifPassword;
-        private Label labelNomorHp;
-        private Label labelAlamat;
-        private RichTextBox AlamatTextBox;
         private Button button0;
         private Button button1;
     }

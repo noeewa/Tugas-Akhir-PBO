@@ -3,7 +3,6 @@ using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tugas_Akhir_PBO.MODEL;
 using Tugas_Akhir_PBO.Models;
 using Tugas_Akhir_PBO.VIEW;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -20,7 +19,8 @@ namespace Tugas_Akhir_PBO.CONTROLLER
             {
                 MessageBox.Show("Username atau password salah!");
                 return null;
-            } else
+            }
+            else
             {
                 UserSession.UserId = user.IdUser;
                 UserSession.Username = user.Nama;
@@ -30,7 +30,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
                 return user;
             }
 
-            
+
         }
         public static User formDaftarPeminjam(User user)
         {

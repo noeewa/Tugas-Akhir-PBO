@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
-using Tugas_Akhir_PBO.MODEL;
 using Tugas_Akhir_PBO.Models;
 
 namespace Tugas_Akhir_PBO.CONTROLLER
@@ -14,7 +13,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
             int? idMitra = new User().GetUserById(UserSession.UserId).IdMitra;
             //MessageBox.Show($"id: {idMitra}");
             return idMitra;
-            
+
         }
         public List<object> GetAllAlat()
         {

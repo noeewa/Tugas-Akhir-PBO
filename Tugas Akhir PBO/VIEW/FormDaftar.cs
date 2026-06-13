@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Tugas_Akhir_PBO.CONTROLLER;
-using Tugas_Akhir_PBO.MODEL;
 using Tugas_Akhir_PBO.Models;
 using Tugas_Akhir_PBO.VIEW;
 
@@ -37,11 +36,9 @@ namespace Tugas_Akhir_PBO.VIEW
 
             User user = new User()
             {
-                Nama = NamaBox.Text,
+                Username = NamaBox.Text,
                 Email = EmailBox.Text,
                 Password = PasswordBox.Text,
-                NoHp = NomorHpBox.Text,
-                Alamat = AlamatTextBox.Text
             };
 
             UseController.formDaftarPeminjam(user);

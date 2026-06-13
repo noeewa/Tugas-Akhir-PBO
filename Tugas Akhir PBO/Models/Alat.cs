@@ -1,12 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
 
 public partial class Alat
 {
-    public int IdAlat { get; set; } = 0;
+    public int IdAlat { get; set; }
 
     public string? NamaAlat { get; set; }
 
@@ -16,17 +15,25 @@ public partial class Alat
 
     public string? Deskripsi { get; set; }
 
-    public int? Status { get; set; }
+    public string? Status { get; set; }
 
     public int? IdMitra { get; set; }
 
     public virtual Mitra? IdMitraNavigation { get; set; }
 
-    public virtual Jadwal? Jadwal { get; set; }
+    public virtual ICollection<Jadwal> Jadwals { get; set; } = new List<Jadwal>();
 
     public virtual KategoriAlat? KategoriNavigation { get; set; }
 
-    public virtual Status? StatusNavigation { get; set; }
+    public Admin getAdmin(int id_admin)
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            return db.Admins.FirstOrDefault(u => u.IdAdmin == id_admin);
+        }
+    }
+
+    //status
 
     public List<Alat> GetAllAlat()
     {
@@ -67,7 +74,7 @@ public partial class Alat
         }
     }
 
-    public Alat updateAlat(int IdAlat, string NamaAlat, string kategori, string Kondisi, string Deskripsi, int status, int IdMitra)
+    public Alat updateAlat(int IdAlat, string NamaAlat, string kategori, string Kondisi, string Deskripsi, string status, int IdMitra)
     {
         using (var db = new TugasAkhirPboContext())
         {
@@ -98,5 +105,4 @@ public partial class Alat
             return alat;
         }
     }
-
 }

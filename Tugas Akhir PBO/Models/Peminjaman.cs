@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tugas_Akhir_PBO.Models;
 
@@ -13,11 +11,13 @@ public partial class Peminjaman
 
     public string? DetailPeminjaman { get; set; }
 
-    public string? TanggalKembali { get; set; }
-
     public string? TanggalPeminjaman { get; set; }
 
+    public string? TanggalKembali { get; set; }
+
     public virtual User? IdUserNavigation { get; set; }
+
+    public virtual ICollection<Jadwal> Jadwals { get; set; } = new List<Jadwal>();
 
     public virtual Pengembalian? Pengembalian { get; set; }
 
@@ -39,7 +39,7 @@ public partial class Peminjaman
         }
     }
 
-    public void inputPeminjaman(string IdPeminjaman, string IdUser, string DetailPeminjaman,string TanggalKembali,string TanggalPeminjaman)
+    public void inputPeminjaman(string IdPeminjaman, string IdUser, string DetailPeminjaman, string TanggalKembali, string TanggalPeminjaman)
     {
         using (var db = new TugasAkhirPboContext())
         {

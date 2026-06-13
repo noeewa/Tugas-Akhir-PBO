@@ -3,15 +3,59 @@ using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
 
-public partial class KategoriAlat
+public partial class Jadwal
 {
-    public string IdKategori { get; set; } = null!;
+    public string IdJadwal { get; set; } = null!;
 
-    public string? NamaKategori { get; set; }
+    public int? IdAlat { get; set; }
 
-    public string? Deskripsi { get; set; }
+    public string? IdPeminjaman { get; set; }
 
-    public virtual ICollection<Alat> Alats { get; set; } = new List<Alat>();
+    public DateOnly? TanggalMulai { get; set; }
+
+    public DateOnly? TanggalSelesai { get; set; }
+
+    public string? StatusJadwal { get; set; }
+
+    public virtual Alat? IdAlatNavigation { get; set; }
+
+    public virtual Peminjaman? IdPeminjamanNavigation { get; set; }
+
+    public Jadwal getDetailPeminjaman(string IdPeminjaman)
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            var detailPeminjaman = db.Jadwals.Find(IdPeminjaman);
+            return detailPeminjaman;
+        }
+    }
+    public List<Jadwal> getJadwal(string IdPeminjam)
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            return db.Jadwals.ToList();
+        }
+    }
+    public Jadwal inputJadwal(string idJadwal, int idAlat, DateOnly? tanggalMulai, DateOnly? tanggalSelesai, string? statusJadwal, string? idPeminjaman)
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            Jadwal jadwal = new Jadwal
+            {
+                IdJadwal = idJadwal,
+                IdAlat = idAlat,
+                TanggalMulai = tanggalMulai,
+                TanggalSelesai = tanggalSelesai,
+                StatusJadwal = statusJadwal,
+                IdPeminjaman = idPeminjaman
+            };
+
+            db.Jadwals.Add(jadwal);
+            db.SaveChanges();
+
+            return jadwal;
+        }
+    }
 
     public KategoriAlat inputKategoriAlat(string IdKategori, string NamaKategori, string Deskripsi)
     {
@@ -63,5 +107,4 @@ public partial class KategoriAlat
             return kategoriAlat;
         }
     }
-
 }

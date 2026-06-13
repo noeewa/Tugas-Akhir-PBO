@@ -7,7 +7,11 @@ public partial class Peminjam
 {
     public int IdPeminjam { get; set; }
 
+    public string NamaPeminjam { get; set; } = null!;
+
     public string? Alamat { get; set; }
+
+    public string? Kontak { get; set; }
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 
@@ -65,4 +69,5 @@ public partial class Peminjam
             return db.Peminjams.ToList();
         }
     }
+
 }

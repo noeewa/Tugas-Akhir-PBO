@@ -7,21 +7,17 @@ public partial class User
 {
     public string IdUser { get; set; } = null!;
 
-    public string? Nama { get; set; }
+    public string? Username { get; set; }
 
     public string? Email { get; set; }
 
     public string? Password { get; set; }
 
-    public string? NoHp { get; set; }
-
-    public string? Alamat { get; set; }
+    public int? IdAdmin { get; set; }
 
     public int? IdMitra { get; set; }
 
     public int? IdPeminjam { get; set; }
-
-    public int? IdAdmin { get; set; }
 
     public virtual Admin? IdAdminNavigation { get; set; }
 
@@ -40,7 +36,7 @@ public partial class User
             //var semua = db.Users.ToList();
             //MessageBox.Show("Total user: " + semua.Count); //debug
 
-            var user = db.Users.FirstOrDefault(u => u.Nama == username && u.Password == password); ;
+            var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password); ;
             return user;
         }
     }
@@ -61,9 +57,8 @@ public partial class User
                 // Tentukan kolom apa saja yang ingin diambil di sini:
                 u.IdUser,
                 u.Password,
-                u.Nama,
+                u.Username,
                 u.Email,
-                u.NoHp,
                 u.IdPeminjam,
                 u.IdAdmin,
                 u.IdMitra
@@ -86,9 +81,8 @@ public partial class User
                 {
                     u.IdUser,
                     u.Password,
-                    u.Nama,
+                    u.Username,
                     u.Email,
-                    u.NoHp,
                     u.IdPeminjam,
                     u.IdAdmin,
                     u.IdMitra
@@ -185,18 +179,16 @@ public partial class User
         }
     }
 
-    public void updateUser(string IdUser, string Nama, string Email, string Password, string NoHp, string Alamat, int IdMitra, int IdPeminjam, int IdAdmin)
+    public void updateUser(string IdUser, string username, string Email, string Password, string NoHp, string Alamat, int IdMitra, int IdPeminjam, int IdAdmin)
     {
         using (var db = new TugasAkhirPboContext())
         {
             User user = new User
             {
                 IdUser = IdUser,
-                Nama = Nama,
+                Username = username,
                 Email = Email,
                 Password = Password,
-                NoHp = NoHp,
-                Alamat = Alamat,
                 IdMitra = IdMitra,
                 IdPeminjam = IdPeminjam,
                 IdAdmin = IdAdmin
@@ -215,4 +207,5 @@ public partial class User
             db.SaveChanges();
         }
     }
+
 }
