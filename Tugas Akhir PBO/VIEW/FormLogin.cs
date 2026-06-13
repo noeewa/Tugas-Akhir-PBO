@@ -12,7 +12,7 @@ namespace Tugas_Akhir_PBO
         public FormLogin()
         {
             InitializeComponent();
-            
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Gambar\Background Hijau.png")
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace Tugas_Akhir_PBO
             User user = UseController.formLogin(UsernameBox.Text, PasswordBox.Text);
             if (user != null && string.IsNullOrEmpty(user.Username))
             {
-               
+
                 MessageBox.Show($"username: {user.Username}");
             }
             if (user == null)
@@ -52,7 +52,7 @@ namespace Tugas_Akhir_PBO
         {
             FormDaftar formdaftar = new FormDaftar();
             this.Hide();
-           
+
             // Jalankan form daftar sebagai dialog tunggal
             if (formdaftar.ShowDialog() == DialogResult.OK)
             {
@@ -65,6 +65,51 @@ namespace Tugas_Akhir_PBO
                 // Jika user menutup form daftar tanpa daftar (Klik X atau Cancel)
                 Application.Exit(); // Atau Application.Exit() tergantung skenario Anda
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JConsoleDaftar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -92,5 +92,15 @@ namespace Tugas_Akhir_PBO.VIEW
                 MessageBox.Show("Silakan klik salah satu baris user di tabel terlebih dahulu!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void guna2ContainerControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridAlat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
