@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tugas_Akhir_PBO.Models
 {
-    public abstract class Abstarct_User
+    public abstract class Abstract_User
     {
         private string? Id { get; set; }
         

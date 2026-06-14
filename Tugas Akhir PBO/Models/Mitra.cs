@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
 
-public partial class Mitra : Abstarct_User
+public partial class Mitra : Abstract_User
 {
     public int Id { get; set; }
 

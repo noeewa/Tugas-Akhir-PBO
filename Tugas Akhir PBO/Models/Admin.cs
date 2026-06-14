@@ -5,7 +5,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tugas_Akhir_PBO.Models;
 
-public partial class Admin : Abstarct_User
+public partial class Admin : Abstract_User
 {
     public int Id { get; set; }
 
