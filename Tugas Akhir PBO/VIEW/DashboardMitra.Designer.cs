@@ -52,7 +52,6 @@
             dataGridAlat.RowHeadersWidth = 51;
             dataGridAlat.Size = new Size(391, 373);
             dataGridAlat.TabIndex = 16;
-            dataGridAlat.CellContentClick += dataGridAlat_CellContentClick;
             // 
             // dataGridView1
             // 

@@ -19,7 +19,7 @@ namespace Tugas_Akhir_PBO.VIEW
             {
                 InitializeComponent();
                 dataGridUser.AutoGenerateColumns = false;
-                dataGridUser.DataSource = ControllerPeminjam.getJadwal();
+                dataGridUser.DataSource = new ControllerPeminjam().getJadwal();
             }
             catch (IOException ex)
             {
@@ -43,6 +43,8 @@ namespace Tugas_Akhir_PBO.VIEW
         {
             if (new FormPinjam().ShowDialog() == DialogResult.OK)
             {
+                dataGridUser.DataSource = null;
+                dataGridUser.DataSource = new ControllerPeminjam().getJadwal();
                 this.Show();
             }
         }
@@ -51,6 +53,8 @@ namespace Tugas_Akhir_PBO.VIEW
         {
             if (new FormPengembalian().ShowDialog() == DialogResult.OK)
             {
+                dataGridUser.DataSource = null;
+                dataGridUser.DataSource = new ControllerPeminjam().getJadwal();
                 this.Show();
             }
         }

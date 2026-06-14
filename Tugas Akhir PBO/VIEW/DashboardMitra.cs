@@ -14,7 +14,6 @@ namespace Tugas_Akhir_PBO.VIEW
         public DashboardMitra()
         {
 
-
             try
             {
                 InitializeComponent();
@@ -43,16 +42,9 @@ namespace Tugas_Akhir_PBO.VIEW
         {
             if (dataGridAlat.CurrentRow != null)
             {
-                // Gunakan CurrentRow karena lebih aman daripada SelectedRows[0] 
-                // CurrentRow akan selalu mengambil baris tempat kursor/klik Anda berada
                 DataGridViewRow barisPilihan = dataGridAlat.CurrentRow;
-
-                // 2. AMAT PENTING: Sesuaikan nama kolom dengan properti C# (PascalCase) 
-                // Tambahkan tanda tanya (?) untuk mencegah error jika nilainya ternyata null
                 int idAlat = Convert.ToInt32(barisPilihan.Cells["IdAlat"].Value);
 
-                // Jika Anda masih ragu nama kolomnya apa, Anda bisa menggunakan angka indeks kolom pertama:
-                // string idUser = barisPilihan.Cells[0].Value?.ToString();
 
                 if (idAlat > 0)
                 {
@@ -60,7 +52,6 @@ namespace Tugas_Akhir_PBO.VIEW
                     return;
                 }
 
-                // 3. Tampilkan konfirmasi sebelum hapus
                 DialogResult result = MessageBox.Show(
                     $"Apakah Anda yakin ingin menghapus user dengan ID: {idAlat}?",
                     "Konfirmasi Hapus",
@@ -72,12 +63,10 @@ namespace Tugas_Akhir_PBO.VIEW
                 {
                     try
                     {
-                        // 4. Eksekusi Hapus via Controller
                         new ControllerMitra().deleteAlat(idAlat);
 
                         MessageBox.Show("User berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // 5. Panggil fungsi refresh yang kita buat sebelumnya agar data di grid langsung hilang
                         dataGridAlat.DataSource = null;
                         dataGridAlat.DataSource = new ControllerMitra().GetAllAlat();
                     }
@@ -91,16 +80,6 @@ namespace Tugas_Akhir_PBO.VIEW
             {
                 MessageBox.Show("Silakan klik salah satu baris user di tabel terlebih dahulu!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void guna2ContainerControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridAlat_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -51,20 +51,12 @@ namespace Tugas_Akhir_PBO.VIEW
         }
 
         private void DeleteUserButton_Click(object sender, EventArgs e)
-        {
-            // 1. Cek apakah ada baris yang dipilih (bisa lewat baris terpilih ATAU sel yang sedang aktif)
+        {            
             if (dataGridUser.CurrentRow != null)
             {
-                // Gunakan CurrentRow karena lebih aman daripada SelectedRows[0] 
-                // CurrentRow akan selalu mengambil baris tempat kursor/klik Anda berada
                 DataGridViewRow barisPilihan = dataGridUser.CurrentRow;
 
-                // 2. AMAT PENTING: Sesuaikan nama kolom dengan properti C# (PascalCase) 
-                // Tambahkan tanda tanya (?) untuk mencegah error jika nilainya ternyata null
                 string idUser = barisPilihan.Cells["IdUser"]?.Value?.ToString();
-
-                // Jika Anda masih ragu nama kolomnya apa, Anda bisa menggunakan angka indeks kolom pertama:
-                // string idUser = barisPilihan.Cells[0].Value?.ToString();
 
                 if (string.IsNullOrEmpty(idUser))
                 {
@@ -72,7 +64,6 @@ namespace Tugas_Akhir_PBO.VIEW
                     return;
                 }
 
-                // 3. Tampilkan konfirmasi sebelum hapus
                 DialogResult result = MessageBox.Show(
                     $"Apakah Anda yakin ingin menghapus user dengan ID: {idUser}?",
                     "Konfirmasi Hapus",
@@ -84,12 +75,9 @@ namespace Tugas_Akhir_PBO.VIEW
                 {
                     try
                     {
-                        // 4. Eksekusi Hapus via Controller
                         ControllerAdmin.DelUser(idUser);
 
                         MessageBox.Show("User berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // 5. Panggil fungsi refresh yang kita buat sebelumnya agar data di grid langsung hilang
                         dataGridUser.DataSource = null;
                         dataGridUser.DataSource = ControllerAdmin.GetAllUserAdmin();
                     }
@@ -110,8 +98,8 @@ namespace Tugas_Akhir_PBO.VIEW
             FormDaftar formDaftar = new FormDaftar();
             if (formDaftar.ShowDialog() == DialogResult.OK)
             {
-                // Jika tombol di form daftar mengirim sinyal DialogResult.OK
-                // Tampilkan kembali form ini
+                dataGridUser.DataSource = null;
+                dataGridUser.DataSource = ControllerAdmin.GetAllUserAdmin();
                 this.Show();
             }
         }

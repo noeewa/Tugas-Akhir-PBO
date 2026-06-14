@@ -124,6 +124,7 @@
             button1.TabIndex = 34;
             button1.Text = "Batal";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
@@ -146,7 +147,6 @@
             Controls.Add(label0);
             Controls.Add(dataGridView2);
             Controls.Add(JConsoleRiwayat);
-
             Name = "FormPengembalian";
             Text = "FormPengembalian";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

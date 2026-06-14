@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPinjam));
             JPinjamAlat = new Label();
             linkLabel1 = new LinkLabel();
-            dataGridView1 = new DataGridView();
+            AlatGridBox = new DataGridView();
             label1 = new Label();
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
             label2 = new Label();
-            dataGridView2 = new DataGridView();
+            AlatListBox = new DataGridView();
             button2 = new Button();
             label3 = new Label();
             button3 = new Button();
@@ -45,8 +45,8 @@
             pictureBox1 = new PictureBox();
             button4 = new Button();
             LoginButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AlatGridBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AlatListBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -71,14 +71,14 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Back";
             // 
-            // dataGridView1
+            // AlatGridBox
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 86);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(377, 186);
-            dataGridView1.TabIndex = 38;
+            AlatGridBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AlatGridBox.Location = new Point(12, 86);
+            AlatGridBox.Name = "AlatGridBox";
+            AlatGridBox.RowHeadersWidth = 51;
+            AlatGridBox.Size = new Size(377, 186);
+            AlatGridBox.TabIndex = 38;
             // 
             // label1
             // 
@@ -114,14 +114,14 @@
             label2.TabIndex = 46;
             label2.Text = "Alat Dalam List";
             // 
-            // dataGridView2
+            // AlatListBox
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(395, 86);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(393, 186);
-            dataGridView2.TabIndex = 45;
+            AlatListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AlatListBox.Location = new Point(395, 86);
+            AlatListBox.Name = "AlatListBox";
+            AlatListBox.RowHeadersWidth = 51;
+            AlatListBox.Size = new Size(393, 186);
+            AlatListBox.TabIndex = 45;
             // 
             // button2
             // 
@@ -187,6 +187,7 @@
             button4.TabIndex = 53;
             button4.Text = "Batal";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // LoginButton
             // 
@@ -207,15 +208,15 @@
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(label2);
-            Controls.Add(dataGridView2);
+            Controls.Add(AlatListBox);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(AlatGridBox);
             Controls.Add(JPinjamAlat);
             Name = "FormPinjam";
             Text = "FormPinjam";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AlatGridBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AlatListBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -225,12 +226,12 @@
 
         private Label JPinjamAlat;
         private LinkLabel linkLabel1;
-        private DataGridView dataGridView1;
+        private DataGridView AlatGridBox;
         private Label label1;
         private Button button1;
         private DateTimePicker dateTimePicker1;
         private Label label2;
-        private DataGridView dataGridView2;
+        private DataGridView AlatListBox;
         private Button button2;
         private Label label3;
         private Button button3;

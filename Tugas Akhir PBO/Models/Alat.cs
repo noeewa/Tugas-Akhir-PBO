@@ -105,4 +105,12 @@ public partial class Alat
             return alat;
         }
     }
+
+    public List<Alat> GetAlatByStatus()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            return db.Alats.Where(a => a.Status == false).ToList();
+        }
+    }
 }
