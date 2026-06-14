@@ -43,6 +43,8 @@
             label4 = new Label();
             dateTimePicker2 = new DateTimePicker();
             pictureBox1 = new PictureBox();
+            button4 = new Button();
+            LoginButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -140,7 +142,6 @@
             label3.TabIndex = 48;
             label3.Text = "Mulai :";
             // 
-            // 
             // button3
             // 
             button3.Location = new Point(649, 57);
@@ -178,11 +179,31 @@
             pictureBox1.TabIndex = 51;
             pictureBox1.TabStop = false;
             // 
+            // button4
+            // 
+            button4.Location = new Point(572, 389);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 29);
+            button4.TabIndex = 53;
+            button4.Text = "Batal";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // LoginButton
+            // 
+            LoginButton.Location = new Point(676, 389);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(94, 29);
+            LoginButton.TabIndex = 52;
+            LoginButton.Text = "Ajukan";
+            LoginButton.UseVisualStyleBackColor = true;
+            // 
             // FormPinjam
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(LoginButton);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(label2);
@@ -216,5 +237,7 @@
         private Label label4;
         private DateTimePicker dateTimePicker2;
         private PictureBox pictureBox1;
+        private Button button4;
+        private Button LoginButton;
     }
 }

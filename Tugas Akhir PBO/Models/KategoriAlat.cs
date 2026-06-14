@@ -12,4 +12,13 @@ public partial class KategoriAlat
     public string? Deskripsi { get; set; }
 
     public virtual ICollection<Alat> Alats { get; set; } = new List<Alat>();
+
+    public List<KategoriAlat> GetKategori()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+      
+            return db.KategoriAlats.ToList();
+        }
+    }
 }

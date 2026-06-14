@@ -37,12 +37,10 @@
             DeskripsiText = new RichTextBox();
             KondisiBox = new TextBox();
             NamaBox = new TextBox();
-            comboBox1 = new ComboBox();
+            KategoriCBox = new ComboBox();
             button1 = new Button();
             button0 = new Button();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +57,7 @@
             // labelVerifPassword
             // 
             labelVerifPassword.AutoSize = true;
-            labelVerifPassword.Location = new Point(52, 277);
+            labelVerifPassword.Location = new Point(52, 234);
             labelVerifPassword.Name = "labelVerifPassword";
             labelVerifPassword.Size = new Size(69, 20);
             labelVerifPassword.TabIndex = 17;
@@ -96,7 +94,7 @@
             // DeskripsiText
             // 
             DeskripsiText.BorderStyle = BorderStyle.FixedSingle;
-            DeskripsiText.Location = new Point(216, 277);
+            DeskripsiText.Location = new Point(216, 234);
             DeskripsiText.Name = "DeskripsiText";
             DeskripsiText.Size = new Size(284, 57);
             DeskripsiText.TabIndex = 25;
@@ -109,7 +107,6 @@
             KondisiBox.Name = "KondisiBox";
             KondisiBox.Size = new Size(284, 27);
             KondisiBox.TabIndex = 22;
-            KondisiBox.UseSystemPasswordChar = true;
             // 
             // NamaBox
             // 
@@ -119,13 +116,13 @@
             NamaBox.Size = new Size(284, 27);
             NamaBox.TabIndex = 20;
             // 
-            // comboBox1
+            // KategoriCBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(216, 130);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(194, 28);
-            comboBox1.TabIndex = 26;
+            KategoriCBox.FormattingEnabled = true;
+            KategoriCBox.Location = new Point(216, 130);
+            KategoriCBox.Name = "KategoriCBox";
+            KategoriCBox.Size = new Size(194, 28);
+            KategoriCBox.TabIndex = 26;
             // 
             // button1
             // 
@@ -157,35 +154,15 @@
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(216, 233);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(284, 27);
-            textBox1.TabIndex = 32;
-            textBox1.UseSystemPasswordChar = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(52, 233);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 20);
-            label1.TabIndex = 31;
-            label1.Text = "Status";
-            // 
             // FormTambahAlat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(button0);
-            Controls.Add(comboBox1);
+            Controls.Add(KategoriCBox);
             Controls.Add(DeskripsiText);
             Controls.Add(KondisiBox);
             Controls.Add(NamaBox);
@@ -211,11 +188,9 @@
         private RichTextBox DeskripsiText;
         private TextBox KondisiBox;
         private TextBox NamaBox;
-        private ComboBox comboBox1;
+        private ComboBox KategoriCBox;
         private Button button1;
         private Button button0;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private Label label1;
     }
 }

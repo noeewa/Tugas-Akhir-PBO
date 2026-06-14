@@ -266,9 +266,9 @@ public partial class TugasAkhirPboContext : DbContext
             entity.Property(e => e.Emails)
                 .HasMaxLength(150)
                 .HasColumnName("email");
-            entity.Property(e => e.Id).HasColumnName("id_admin");
-            entity.Property(e => e.Id).HasColumnName("id_mitra");
-            entity.Property(e => e.Id).HasColumnName("id_peminjam");
+            entity.Property(e => e.IdAdmin).HasColumnName("id_admin");
+            entity.Property(e => e.IdMitra).HasColumnName("id_mitra");
+            entity.Property(e => e.IdPeminjam).HasColumnName("id_peminjam");
             entity.Property(e => e.Pass)
                 .HasMaxLength(255)
                 .HasColumnName("password");
@@ -277,17 +277,17 @@ public partial class TugasAkhirPboContext : DbContext
                 .HasColumnName("username");
 
             entity.HasOne(d => d.IdAdminNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.Id)
+                .HasForeignKey(d => d.IdAdmin)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("fk_users_admin");
 
             entity.HasOne(d => d.IdMitraNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.Id)
+                .HasForeignKey(d => d.IdMitra)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("fk_users_mitra");
 
             entity.HasOne(d => d.IdPeminjamNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.Id)
+                .HasForeignKey(d => d.IdPeminjam)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("fk_users_peminjam");
         });

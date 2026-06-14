@@ -15,21 +15,44 @@ namespace Tugas_Akhir_PBO.VIEW
     {
         public DashboardPeminjam()
         {
-            try {
+            try
+            {
                 InitializeComponent();
                 dataGridUser.AutoGenerateColumns = false;
                 dataGridUser.DataSource = ControllerPeminjam.getJadwal();
-            } catch(IOException ex)
+            }
+            catch (IOException ex)
             {
                 MessageBox.Show(ex.Message);
                 Application.Exit();
             }
-            
+
         }
 
         private void LabelLinkBarang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bPinjam_Click(object sender, EventArgs e)
+        {
+            if (new FormPinjam().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
+        }
+
+        private void bPengembalian_Click(object sender, EventArgs e)
+        {
+            if (new FormPengembalian().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
     }
 }

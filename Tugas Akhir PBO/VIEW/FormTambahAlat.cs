@@ -15,6 +15,9 @@ namespace Tugas_Akhir_PBO.VIEW
         public FormTambahAlat()
         {
             InitializeComponent();
+            KategoriCBox.DisplayMember = "NamaKategori";
+            KategoriCBox.ValueMember = "IdKategori";
+            KategoriCBox.DataSource = new ControllerMitra().getKategori();
         }
 
         private void labelPassword_Click(object sender, EventArgs e)
@@ -29,11 +32,12 @@ namespace Tugas_Akhir_PBO.VIEW
 
         private void button0_Click(object sender, EventArgs e)
         {
-            
             Alat alatRegis = new Alat()
             {
                 NamaAlat = NamaBox.Text,
                 Kondisi = KondisiBox.Text,
+                Kategori = KategoriCBox.SelectedValue.ToString(),
+                Status = false,
                 Deskripsi = DeskripsiText.Text,
             };
             new ControllerMitra().TambahAlat(alatRegis);

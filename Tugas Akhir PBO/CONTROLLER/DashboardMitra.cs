@@ -8,12 +8,17 @@ namespace Tugas_Akhir_PBO.CONTROLLER
 {
     internal class ControllerMitra
     {
+        public List<KategoriAlat> getKategori()
+        {
+
+            List<KategoriAlat> kategori = new KategoriAlat().GetKategori();
+            return kategori;
+        }
         public int? getMitra()
         {
+            //MessageBox.Show($"UserSession.UserId = '{UserSession.UserId}'");
             int? idMitra = new User().GetUserById(UserSession.UserId).IdMitra;
-            //MessageBox.Show($"id: {idMitra}");
             return idMitra;
-
         }
         public List<object> GetAllAlat()
         {
