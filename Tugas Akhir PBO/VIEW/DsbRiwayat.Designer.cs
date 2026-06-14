@@ -29,112 +29,135 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbRiwayat));
-            JConsoleRiwayat = new Label();
-            dataGridView2 = new DataGridView();
-            label0 = new Label();
             LoginButton = new Button();
             linkLabel1 = new LinkLabel();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            button2 = new Button();
+            dataGridView2 = new DataGridView();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
-            // 
-            // JConsoleRiwayat
-            // 
-            JConsoleRiwayat.AutoSize = true;
-            JConsoleRiwayat.Font = new Font("Inter Tight ExtraBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            JConsoleRiwayat.Location = new Point(12, 9);
-            JConsoleRiwayat.Name = "JConsoleRiwayat";
-            JConsoleRiwayat.Size = new Size(290, 40);
-            JConsoleRiwayat.TabIndex = 1;
-            JConsoleRiwayat.Text = "Riwayat Peminjaman";
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 89);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(776, 293);
-            dataGridView2.TabIndex = 28;
-            // 
-            // label0
-            // 
-            label0.AutoSize = true;
-            label0.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label0.Location = new Point(12, 58);
-            label0.Name = "label0";
-            label0.Size = new Size(112, 24);
-            label0.TabIndex = 27;
-            label0.Text = "Detail Riwayat";
             // 
             // LoginButton
             // 
-            LoginButton.Location = new Point(654, 388);
+            LoginButton.BackColor = Color.White;
+            LoginButton.BackgroundImage = (Image)resources.GetObject("LoginButton.BackgroundImage");
+            LoginButton.BackgroundImageLayout = ImageLayout.Zoom;
+            LoginButton.FlatAppearance.BorderSize = 0;
+            LoginButton.FlatStyle = FlatStyle.Flat;
+            LoginButton.Location = new Point(658, 400);
+            LoginButton.Margin = new Padding(3, 2, 3, 2);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(94, 29);
+            LoginButton.Size = new Size(82, 37);
             LoginButton.TabIndex = 29;
-            LoginButton.Text = "Refresh";
-            LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.Click += LoginButton_Click;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(748, 23);
+            linkLabel1.Location = new Point(654, 17);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(40, 20);
+            linkLabel1.Size = new Size(32, 15);
             linkLabel1.TabIndex = 30;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Back";
             // 
             // button1
             // 
-            button1.Location = new Point(453, 388);
+            button1.BackColor = Color.White;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(746, 401);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(160, 29);
+            button1.Size = new Size(128, 37);
             button1.TabIndex = 31;
-            button1.Text = "Detail Peminjaman";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 413);
+            pictureBox1.Location = new Point(-1, -2);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(97, 25);
+            pictureBox1.Size = new Size(912, 570);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.White;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(409, 263);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 37);
+            button2.TabIndex = 46;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.BackgroundColor = Color.White;
+            dataGridView2.BorderStyle = BorderStyle.None;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(181, 103);
+            dataGridView2.Margin = new Padding(3, 2, 3, 2);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(693, 290);
+            dataGridView2.TabIndex = 28;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.White;
+            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
+            button3.BackgroundImageLayout = ImageLayout.Zoom;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(744, 397);
+            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Name = "button3";
+            button3.Size = new Size(130, 41);
+            button3.TabIndex = 47;
+            button3.UseVisualStyleBackColor = false;
+            // 
             // DsbRiwayat
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(901, 562);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(LoginButton);
             Controls.Add(dataGridView2);
-            Controls.Add(label0);
-            Controls.Add(JConsoleRiwayat);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DsbRiwayat";
             Text = "Riwayat";
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label JConsoleRiwayat;
-        private DataGridView dataGridView2;
-        private Label label0;
         private Button LoginButton;
         private LinkLabel linkLabel1;
         private Button button1;
         private PictureBox pictureBox1;
+        private Button button2;
+        private DataGridView dataGridView2;
+        private Button button3;
     }
 }

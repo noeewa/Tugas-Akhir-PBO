@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbAlat));
-            JudulBesar0 = new Label();
             dataGridView2 = new DataGridView();
-            label0 = new Label();
             bRefresh = new Button();
             button1 = new Button();
             button2 = new Button();
@@ -41,62 +39,59 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // JudulBesar0
-            // 
-            JudulBesar0.AutoSize = true;
-            JudulBesar0.Font = new Font("Inter Tight ExtraBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            JudulBesar0.Location = new Point(12, 9);
-            JudulBesar0.Name = "JudulBesar0";
-            JudulBesar0.Size = new Size(123, 40);
-            JudulBesar0.TabIndex = 2;
-            JudulBesar0.Text = "List Alat";
-            // 
             // dataGridView2
             // 
+            dataGridView2.BackgroundColor = Color.White;
+            dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 90);
+            dataGridView2.Location = new Point(188, 97);
+            dataGridView2.Margin = new Padding(3, 2, 3, 2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(776, 278);
+            dataGridView2.Size = new Size(689, 292);
             dataGridView2.TabIndex = 28;
-            // 
-            // label0
-            // 
-            label0.AutoSize = true;
-            label0.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label0.Location = new Point(12, 59);
-            label0.Name = "label0";
-            label0.Size = new Size(82, 24);
-            label0.TabIndex = 27;
-            label0.Text = "Detail Alat";
             // 
             // bRefresh
             // 
-            bRefresh.Location = new Point(679, 374);
+            bRefresh.BackColor = Color.White;
+            bRefresh.BackgroundImage = (Image)resources.GetObject("bRefresh.BackgroundImage");
+            bRefresh.BackgroundImageLayout = ImageLayout.Zoom;
+            bRefresh.FlatAppearance.BorderSize = 0;
+            bRefresh.FlatStyle = FlatStyle.Flat;
+            bRefresh.Location = new Point(796, 403);
+            bRefresh.Margin = new Padding(3, 2, 3, 2);
             bRefresh.Name = "bRefresh";
-            bRefresh.Size = new Size(93, 29);
+            bRefresh.Size = new Size(81, 22);
             bRefresh.TabIndex = 29;
-            bRefresh.Text = "Refresh";
-            bRefresh.UseVisualStyleBackColor = true;
+            bRefresh.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            button1.Location = new Point(51, 374);
+            button1.BackColor = Color.White;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(188, 403);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(149, 29);
+            button1.Size = new Size(100, 22);
             button1.TabIndex = 30;
-            button1.Text = "Update Alat";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            button2.Location = new Point(215, 374);
+            button2.BackColor = Color.White;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(284, 403);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(188, 29);
+            button2.Size = new Size(121, 22);
             button2.TabIndex = 31;
-            button2.Text = "Atur/Tambah Kategori";
-            button2.UseVisualStyleBackColor = true;
-            //
+            button2.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
             // 
@@ -112,38 +107,34 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 413);
+            pictureBox1.Location = new Point(-1, -3);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(97, 25);
+            pictureBox1.Size = new Size(908, 567);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 47;
             pictureBox1.TabStop = false;
             // 
             // DsbAlat
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(901, 562);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(bRefresh);
             Controls.Add(dataGridView2);
-            Controls.Add(label0);
-            Controls.Add(JudulBesar0);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DsbAlat";
             Text = "Barang";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label JudulBesar0;
         private DataGridView dataGridView2;
-        private Label label0;
         private Button bRefresh;
         private Button button1;
         private Button button2;

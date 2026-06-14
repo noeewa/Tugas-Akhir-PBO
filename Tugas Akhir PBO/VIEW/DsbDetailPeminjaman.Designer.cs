@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbDetailPeminjaman));
-            JudulBesar0 = new Label();
-            alatLabel = new Label();
             dataGridUser = new DataGridView();
             bRefresh = new Button();
             linkLabel1 = new LinkLabel();
@@ -40,44 +37,32 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // JudulBesar0
-            // 
-            JudulBesar0.AutoSize = true;
-            JudulBesar0.Font = new Font("Inter Tight ExtraBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            JudulBesar0.Location = new Point(12, 9);
-            JudulBesar0.Name = "JudulBesar0";
-            JudulBesar0.Size = new Size(261, 40);
-            JudulBesar0.TabIndex = 3;
-            JudulBesar0.Text = "Detail Peminjaman";
-            // 
-            // alatLabel
-            // 
-            alatLabel.AutoSize = true;
-            alatLabel.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            alatLabel.Location = new Point(12, 63);
-            alatLabel.Name = "alatLabel";
-            alatLabel.Size = new Size(38, 24);
-            alatLabel.TabIndex = 21;
-            alatLabel.Text = "Alat";
-            // 
             // dataGridUser
             // 
+            dataGridUser.BackgroundColor = Color.White;
+            dataGridUser.BorderStyle = BorderStyle.None;
             dataGridUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridUser.Location = new Point(12, 90);
+            dataGridUser.Location = new Point(177, 102);
+            dataGridUser.Margin = new Padding(3, 2, 3, 2);
             dataGridUser.Name = "dataGridUser";
             dataGridUser.RowHeadersWidth = 51;
-            dataGridUser.Size = new Size(776, 293);
+            dataGridUser.Size = new Size(690, 369);
             dataGridUser.TabIndex = 20;
             // 
             // bRefresh
             // 
-            bRefresh.Location = new Point(660, 389);
+            bRefresh.BackColor = Color.White;
+            bRefresh.BackgroundImage = (Image)resources.GetObject("bRefresh.BackgroundImage");
+            bRefresh.BackgroundImageLayout = ImageLayout.Zoom;
+            bRefresh.FlatAppearance.BorderSize = 0;
+            bRefresh.FlatStyle = FlatStyle.Flat;
+            bRefresh.Location = new Point(786, 475);
+            bRefresh.Margin = new Padding(3, 2, 3, 2);
             bRefresh.Name = "bRefresh";
-            bRefresh.Size = new Size(93, 29);
+            bRefresh.Size = new Size(81, 22);
             bRefresh.TabIndex = 34;
-            bRefresh.Text = "Refresh";
-            bRefresh.UseVisualStyleBackColor = true;
-            // 
+            bRefresh.UseVisualStyleBackColor = false;
+            bRefresh.Click += bRefresh_Click;
             // 
             // linkLabel1
             // 
@@ -93,35 +78,31 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 413);
+            pictureBox1.Location = new Point(0, -1);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(97, 25);
+            pictureBox1.Size = new Size(897, 563);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 47;
             pictureBox1.TabStop = false;
             // 
             // DsbDetailPeminjaman
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(901, 562);
             Controls.Add(bRefresh);
-            Controls.Add(alatLabel);
             Controls.Add(dataGridUser);
-            Controls.Add(JudulBesar0);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DsbDetailPeminjaman";
             Text = "DsbDetailPeminjaman";
             ((System.ComponentModel.ISupportInitialize)dataGridUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label JudulBesar0;
-        private Label alatLabel;
         private DataGridView dataGridUser;
         private Button bRefresh;
         private LinkLabel linkLabel1;

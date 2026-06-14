@@ -51,7 +51,7 @@ namespace Tugas_Akhir_PBO.VIEW
         }
 
         private void DeleteUserButton_Click(object sender, EventArgs e)
-        {            
+        {
             if (dataGridUser.CurrentRow != null)
             {
                 DataGridViewRow barisPilihan = dataGridUser.CurrentRow;
@@ -131,6 +131,16 @@ namespace Tugas_Akhir_PBO.VIEW
         }
 
         private void dataGridMitra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
