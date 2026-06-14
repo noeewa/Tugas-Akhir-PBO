@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbDetailPeminjaman));
             JudulBesar0 = new Label();
             alatLabel = new Label();
             dataGridUser = new DataGridView();
             bRefresh = new Button();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -81,16 +78,6 @@
             bRefresh.Text = "Refresh";
             bRefresh.UseVisualStyleBackColor = true;
             // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(linkLabel1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(276, 12);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(512, 37);
-            guna2ContainerControl1.TabIndex = 35;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
             // linkLabel1
             // 
@@ -119,7 +106,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
-            Controls.Add(guna2ContainerControl1);
             Controls.Add(bRefresh);
             Controls.Add(alatLabel);
             Controls.Add(dataGridUser);
@@ -127,8 +113,6 @@
             Name = "DsbDetailPeminjaman";
             Text = "DsbDetailPeminjaman";
             ((System.ComponentModel.ISupportInitialize)dataGridUser).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -140,7 +124,6 @@
         private Label alatLabel;
         private DataGridView dataGridUser;
         private Button bRefresh;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
     }

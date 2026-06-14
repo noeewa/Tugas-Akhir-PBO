@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbProsesPengembalian));
             label0 = new Label();
             dataGridView2 = new DataGridView();
@@ -37,12 +36,10 @@
             dataGrid0 = new DataGridView();
             label1 = new Label();
             bRefresh = new Button();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGrid0).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -106,16 +103,6 @@
             bRefresh.UseVisualStyleBackColor = true;
             // 
             // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(linkLabel1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(347, 12);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(441, 37);
-            guna2ContainerControl1.TabIndex = 36;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
-            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
@@ -143,7 +130,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
-            Controls.Add(guna2ContainerControl1);
             Controls.Add(bRefresh);
             Controls.Add(dataGridView2);
             Controls.Add(label2);
@@ -154,8 +140,6 @@
             Text = "DsbProsesPengembalian";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGrid0).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -168,7 +152,6 @@
         private DataGridView dataGrid0;
         private Label label1;
         private Button bRefresh;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
     }

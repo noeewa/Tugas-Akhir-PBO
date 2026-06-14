@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_KonfirmasiPengembalian));
             JConsoleRiwayat = new Label();
             dataGridView2 = new DataGridView();
@@ -41,13 +39,11 @@
             labelEmail = new Label();
             label1 = new Label();
             button1 = new Button();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -143,21 +139,6 @@
             button1.Text = "Tolak";
             button1.UseVisualStyleBackColor = true;
             // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(label2);
-            guna2ContainerControl1.Controls.Add(textBox2);
-            guna2ContainerControl1.Controls.Add(textBox1);
-            guna2ContainerControl1.Controls.Add(button1);
-            guna2ContainerControl1.Controls.Add(LoginButton);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(12, 181);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(776, 225);
-            guna2ContainerControl1.TabIndex = 39;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
-            // 
             // textBox1
             // 
             textBox1.Location = new Point(317, 126);
@@ -206,12 +187,9 @@
             Controls.Add(label0);
             Controls.Add(dataGridView2);
             Controls.Add(JConsoleRiwayat);
-            Controls.Add(guna2ContainerControl1);
             Name = "F_KonfirmasiPengembalian";
             Text = "F_KonfirmasiPengembalian";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -229,7 +207,6 @@
         private Label labelEmail;
         private Label label1;
         private Button button1;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private PictureBox pictureBox1;
         private TextBox textBox1;
         private Label label2;

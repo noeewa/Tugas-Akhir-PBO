@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUpdateAlat));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             JConsoleDaftar = new Label();
             comboBox1 = new ComboBox();
             AlamatTextBox = new RichTextBox();
@@ -46,12 +44,10 @@
             label1 = new Label();
             button2 = new Button();
             pictureBox1 = new PictureBox();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             textBox2 = new TextBox();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             SuspendLayout();
             // 
             // JConsoleDaftar
@@ -195,25 +191,6 @@
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
             // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(textBox2);
-            guna2ContainerControl1.Controls.Add(label2);
-            guna2ContainerControl1.Controls.Add(textBox1);
-            guna2ContainerControl1.Controls.Add(button2);
-            guna2ContainerControl1.Controls.Add(button1);
-            guna2ContainerControl1.Controls.Add(AlamatTextBox);
-            guna2ContainerControl1.Controls.Add(button0);
-            guna2ContainerControl1.Controls.Add(labelVerifPassword);
-            guna2ContainerControl1.Controls.Add(label1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(12, 80);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(776, 331);
-            guna2ContainerControl1.TabIndex = 42;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
-            // 
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.FixedSingle;
@@ -246,13 +223,10 @@
             Controls.Add(labelEmail);
             Controls.Add(labelPilih);
             Controls.Add(JConsoleDaftar);
-            Controls.Add(guna2ContainerControl1);
             Name = "FormUpdateAlat";
             Text = "FormUpdateStatus";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -274,7 +248,6 @@
         private Label label1;
         private Button button2;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private TextBox textBox2;
         private Label label2;
     }

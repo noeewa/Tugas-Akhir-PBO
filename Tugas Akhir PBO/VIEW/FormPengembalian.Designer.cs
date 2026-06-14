@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPengembalian));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             JConsoleRiwayat = new Label();
             labelEmail = new Label();
             labelNama = new Label();
@@ -41,10 +39,8 @@
             LoginButton = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             SuspendLayout();
             // 
             // JConsoleRiwayat
@@ -139,20 +135,6 @@
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
             // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(comboBox1);
-            guna2ContainerControl1.Controls.Add(labelNama);
-            guna2ContainerControl1.Controls.Add(labelEmail);
-            guna2ContainerControl1.Controls.Add(dateTimePicker1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(12, 211);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(776, 196);
-            guna2ContainerControl1.TabIndex = 36;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
-            // 
             // FormPengembalian
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -164,13 +146,11 @@
             Controls.Add(label0);
             Controls.Add(dataGridView2);
             Controls.Add(JConsoleRiwayat);
-            Controls.Add(guna2ContainerControl1);
+
             Name = "FormPengembalian";
             Text = "FormPengembalian";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,6 +167,5 @@
         private Button LoginButton;
         private Button button1;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
     }
 }

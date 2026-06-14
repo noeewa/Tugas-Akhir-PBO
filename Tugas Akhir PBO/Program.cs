@@ -1,6 +1,7 @@
 using Tugas_Akhir_PBO.VIEW;
 using Tugas_Akhir_PBO.CONTROLLER;
 using Tugas_Akhir_PBO.Models;
+using System.Windows.Forms;
 
 namespace Tugas_Akhir_PBO
 {
@@ -9,15 +10,17 @@ namespace Tugas_Akhir_PBO
         [STAThread]
         static void Main()
         {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+
+            try
+            {
+                Application.Run(new FormLogin());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString());
+            }
         }
     }
 }

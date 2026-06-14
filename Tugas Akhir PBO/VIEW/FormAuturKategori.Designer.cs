@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuturKategori));
             JConsoleDaftar = new Label();
             dataGridView1 = new DataGridView();
@@ -41,13 +37,9 @@
             button3 = new Button();
             textBox2 = new TextBox();
             labelNama = new Label();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             linkLabel1 = new LinkLabel();
-            guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
-            guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -121,17 +113,6 @@
             labelNama.TabIndex = 15;
             labelNama.Text = "Pilih Kategori";
             // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(linkLabel1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(208, 12);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(580, 37);
-            guna2ContainerControl1.TabIndex = 36;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
-            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
@@ -142,22 +123,6 @@
             linkLabel1.TabIndex = 31;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Back";
-            // 
-            // guna2ContainerControl2
-            // 
-            guna2ContainerControl2.Controls.Add(button2);
-            guna2ContainerControl2.Controls.Add(textBox1);
-            guna2ContainerControl2.Controls.Add(button1);
-            guna2ContainerControl2.Controls.Add(textBox2);
-            guna2ContainerControl2.Controls.Add(button3);
-            guna2ContainerControl2.CustomizableEdges = customizableEdges3;
-            guna2ContainerControl2.Location = new Point(12, 346);
-            guna2ContainerControl2.Name = "guna2ContainerControl2";
-            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ContainerControl2.Size = new Size(776, 52);
-            guna2ContainerControl2.TabIndex = 37;
-            guna2ContainerControl2.Text = "guna2ContainerControl2";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -174,18 +139,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
-            Controls.Add(guna2ContainerControl1);
             Controls.Add(labelNama);
             Controls.Add(dataGridView1);
             Controls.Add(JConsoleDaftar);
-            Controls.Add(guna2ContainerControl2);
             Name = "FormAuturKategori";
             Text = "FormAuturKategori";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
-            guna2ContainerControl2.ResumeLayout(false);
-            guna2ContainerControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -201,9 +160,7 @@
         private Button button3;
         private TextBox textBox2;
         private Label labelNama;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private LinkLabel linkLabel1;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private PictureBox pictureBox1;
     }
 }

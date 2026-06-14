@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbAlat));
             JudulBesar0 = new Label();
             dataGridView2 = new DataGridView();
@@ -37,11 +35,9 @@
             bRefresh = new Button();
             button1 = new Button();
             button2 = new Button();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -100,17 +96,7 @@
             button2.TabIndex = 31;
             button2.Text = "Atur/Tambah Kategori";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(linkLabel1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(141, 12);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(647, 37);
-            guna2ContainerControl1.TabIndex = 34;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
+            //
             // 
             // linkLabel1
             // 
@@ -139,7 +125,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
-            Controls.Add(guna2ContainerControl1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(bRefresh);
@@ -149,8 +134,6 @@
             Name = "DsbAlat";
             Text = "Barang";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -164,7 +147,6 @@
         private Button bRefresh;
         private Button button1;
         private Button button2;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
     }

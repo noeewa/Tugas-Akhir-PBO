@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPinjam));
             JPinjamAlat = new Label();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             linkLabel1 = new LinkLabel();
             dataGridView1 = new DataGridView();
             label1 = new Label();
@@ -44,15 +39,12 @@
             dataGridView2 = new DataGridView();
             button2 = new Button();
             label3 = new Label();
-            guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             button3 = new Button();
             label4 = new Label();
             dateTimePicker2 = new DateTimePicker();
             pictureBox1 = new PictureBox();
-            guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -65,17 +57,6 @@
             JPinjamAlat.Size = new Size(165, 40);
             JPinjamAlat.TabIndex = 35;
             JPinjamAlat.Text = "Pinjam Alat";
-            // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(linkLabel1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(183, 12);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(605, 37);
-            guna2ContainerControl1.TabIndex = 37;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
             // linkLabel1
             // 
@@ -159,20 +140,6 @@
             label3.TabIndex = 48;
             label3.Text = "Mulai :";
             // 
-            // guna2ContainerControl2
-            // 
-            guna2ContainerControl2.Controls.Add(button3);
-            guna2ContainerControl2.Controls.Add(label4);
-            guna2ContainerControl2.Controls.Add(dateTimePicker2);
-            guna2ContainerControl2.Controls.Add(label3);
-            guna2ContainerControl2.Controls.Add(dateTimePicker1);
-            guna2ContainerControl2.CustomizableEdges = customizableEdges3;
-            guna2ContainerControl2.Location = new Point(12, 313);
-            guna2ContainerControl2.Name = "guna2ContainerControl2";
-            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ContainerControl2.Size = new Size(776, 94);
-            guna2ContainerControl2.TabIndex = 49;
-            guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
             // button3
             // 
@@ -223,17 +190,11 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
-            Controls.Add(guna2ContainerControl1);
             Controls.Add(JPinjamAlat);
-            Controls.Add(guna2ContainerControl2);
             Name = "FormPinjam";
             Text = "FormPinjam";
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            guna2ContainerControl2.ResumeLayout(false);
-            guna2ContainerControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -242,7 +203,6 @@
         #endregion
 
         private Label JPinjamAlat;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private LinkLabel linkLabel1;
         private DataGridView dataGridView1;
         private Label label1;
@@ -252,7 +212,6 @@
         private DataGridView dataGridView2;
         private Button button2;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Button button3;
         private Label label4;
         private DateTimePicker dateTimePicker2;

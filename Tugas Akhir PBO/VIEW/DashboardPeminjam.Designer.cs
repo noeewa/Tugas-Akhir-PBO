@@ -29,20 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardPeminjam));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             JConsolePenyewa = new Label();
             dataGridUser = new DataGridView();
             JadwalLabel = new Label();
             bPinjam = new Button();
             bBatalkan = new Button();
             bPengembalian = new Button();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             linkLabel3 = new LinkLabel();
             linkLabel5 = new LinkLabel();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -118,18 +114,6 @@
             bPengembalian.TabIndex = 20;
             bPengembalian.UseVisualStyleBackColor = false;
             // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(linkLabel3);
-            guna2ContainerControl1.Controls.Add(linkLabel5);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges1;
-            guna2ContainerControl1.Location = new Point(244, 9);
-            guna2ContainerControl1.Margin = new Padding(3, 2, 3, 2);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ContainerControl1.Size = new Size(445, 28);
-            guna2ContainerControl1.TabIndex = 35;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
             // linkLabel3
             // 
@@ -172,7 +156,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(901, 565);
             Controls.Add(pictureBox1);
-            Controls.Add(guna2ContainerControl1);
             Controls.Add(bPengembalian);
             Controls.Add(bBatalkan);
             Controls.Add(bPinjam);
@@ -183,8 +166,6 @@
             Name = "DashboardPeminjam";
             Text = "DashboardPeminjam";
             ((System.ComponentModel.ISupportInitialize)dataGridUser).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
-            guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -198,7 +179,6 @@
         private Button bPinjam;
         private Button bBatalkan;
         private Button bPengembalian;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel5;
         private PictureBox pictureBox1;
