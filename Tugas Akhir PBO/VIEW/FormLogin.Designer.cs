@@ -43,7 +43,7 @@
             // 
             // PasswordBox
             // 
-            PasswordBox.Location = new Point(639, 431);
+            PasswordBox.Location = new Point(636, 374);
             PasswordBox.Margin = new Padding(4, 2, 4, 2);
             PasswordBox.Name = "PasswordBox";
             PasswordBox.Size = new Size(248, 27);
@@ -53,7 +53,7 @@
             // 
             // UsernameBox
             // 
-            UsernameBox.Location = new Point(639, 348);
+            UsernameBox.Location = new Point(636, 291);
             UsernameBox.Margin = new Padding(4, 2, 4, 2);
             UsernameBox.Name = "UsernameBox";
             UsernameBox.Size = new Size(248, 27);
@@ -66,7 +66,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Green;
-            label1.Location = new Point(639, 314);
+            label1.Location = new Point(636, 257);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(72, 18);
@@ -79,7 +79,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Green;
-            label2.Location = new Point(642, 394);
+            label2.Location = new Point(639, 337);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(67, 18);
@@ -93,7 +93,7 @@
             LoginButton.BackgroundImageLayout = ImageLayout.Zoom;
             LoginButton.FlatAppearance.BorderSize = 0;
             LoginButton.FlatStyle = FlatStyle.Flat;
-            LoginButton.Location = new Point(728, 474);
+            LoginButton.Location = new Point(725, 417);
             LoginButton.Margin = new Padding(4, 2, 4, 2);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(160, 52);
@@ -108,7 +108,7 @@
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(639, 474);
+            button1.Location = new Point(636, 417);
             button1.Margin = new Padding(4, 2, 4, 2);
             button1.Name = "button1";
             button1.Size = new Size(82, 52);
@@ -133,10 +133,10 @@
             // 
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(493, -6);
+            pictureBox6.Location = new Point(470, 2);
             pictureBox6.Margin = new Padding(4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(566, 670);
+            pictureBox6.Size = new Size(591, 670);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 12;
             pictureBox6.TabStop = false;

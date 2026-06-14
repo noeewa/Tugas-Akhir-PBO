@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTambahAlat));
             JConsoleDaftar = new Label();
             labelVerifPassword = new Label();
-            labelPassword = new Label();
             labelEmail = new Label();
             labelNama = new Label();
             DeskripsiText = new RichTextBox();
@@ -41,6 +40,7 @@
             button1 = new Button();
             button0 = new Button();
             pictureBox1 = new PictureBox();
+            labelPassword = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,16 +62,6 @@
             labelVerifPassword.Size = new Size(69, 20);
             labelVerifPassword.TabIndex = 17;
             labelVerifPassword.Text = "Deskripsi";
-            // 
-            // labelPassword
-            // 
-            labelPassword.AutoSize = true;
-            labelPassword.Location = new Point(52, 185);
-            labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(58, 20);
-            labelPassword.TabIndex = 16;
-            labelPassword.Text = "Kondisi";
-            labelPassword.Click += labelPassword_Click;
             // 
             // labelEmail
             // 
@@ -154,6 +144,16 @@
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
             // 
+            // labelPassword
+            // 
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(52, 185);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(58, 20);
+            labelPassword.TabIndex = 16;
+            labelPassword.Text = "Kondisi";
+            labelPassword.Click += labelPassword_Click;
+            // 
             // FormTambahAlat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -182,7 +182,6 @@
 
         private Label JConsoleDaftar;
         private Label labelVerifPassword;
-        private Label labelPassword;
         private Label labelEmail;
         private Label labelNama;
         private RichTextBox DeskripsiText;
@@ -192,5 +191,6 @@
         private Button button1;
         private Button button0;
         private PictureBox pictureBox1;
+        private Label labelPassword;
     }
 }

@@ -53,10 +53,7 @@ public partial class User
     {
         using (var db = new TugasAkhirPboContext())
         {
-            //var semua = db.Users.ToList();
-            //MessageBox.Show("Total user: " + semua.Count); //debug
-
-            var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password); ;
+            var user = db.Users.FirstOrDefault(u => u.Nama == username && u.Pass == password);
             return user;
         }
     }
@@ -117,19 +114,16 @@ public partial class User
     {
         using (var db = new TugasAkhirPboContext())
         {
-   
             var allIds = db.Users
-                           .Select(u => u.IdUser)
+                           .Select(u => u.Id)
                            .OrderBy(id => id)
                            .ToList();
 
-      
             if (allIds.Count == 0)
             {
                 return 0;
             }
 
-        
             List<int> daftarAngka = new List<int>();
             foreach (var id in allIds)
             {
@@ -139,20 +133,16 @@ public partial class User
                 }
             }
 
-           
             int targetAngka = 1;
             foreach (int angkaAktif in daftarAngka)
             {
-             
                 if (angkaAktif != targetAngka)
                 {
-         
                     return targetAngka - 1;
                 }
                 targetAngka++;
             }
 
-        
             return targetAngka - 1;
         }
     }

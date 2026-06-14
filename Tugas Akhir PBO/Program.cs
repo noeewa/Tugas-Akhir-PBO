@@ -15,7 +15,7 @@ namespace Tugas_Akhir_PBO
 
             try
             {
-                Application.Run(new DashboardPeminjam());
+                Application.Run(new FormLogin());
             }
             catch (Exception ex)
             {
