@@ -46,6 +46,8 @@
             pictureBox1 = new PictureBox();
             textBox2 = new TextBox();
             label2 = new Label();
+            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -54,7 +56,7 @@
             // 
             JConsoleDaftar.AutoSize = true;
             JConsoleDaftar.Font = new Font("Inter Tight ExtraBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            JConsoleDaftar.Location = new Point(12, 9);
+            JConsoleDaftar.Location = new Point(14, 12);
             JConsoleDaftar.Name = "JConsoleDaftar";
             JConsoleDaftar.Size = new Size(172, 40);
             JConsoleDaftar.TabIndex = 3;
@@ -63,9 +65,10 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(464, 97);
+            comboBox1.Location = new Point(530, 129);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(194, 28);
+            comboBox1.Size = new Size(221, 28);
             comboBox1.TabIndex = 34;
             // 
             // AlamatTextBox
@@ -80,9 +83,10 @@
             // PasswordBox
             // 
             PasswordBox.BorderStyle = BorderStyle.FixedSingle;
-            PasswordBox.Location = new Point(464, 148);
+            PasswordBox.Location = new Point(530, 197);
+            PasswordBox.Margin = new Padding(3, 4, 3, 4);
             PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(284, 27);
+            PasswordBox.Size = new Size(221, 27);
             PasswordBox.TabIndex = 32;
             PasswordBox.UseSystemPasswordChar = true;
             // 
@@ -100,7 +104,7 @@
             // 
             labelPassword.AutoSize = true;
             labelPassword.BackColor = Color.White;
-            labelPassword.Location = new Point(379, 148);
+            labelPassword.Location = new Point(433, 197);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(65, 20);
             labelPassword.TabIndex = 29;
@@ -110,7 +114,7 @@
             // 
             labelEmail.AutoSize = true;
             labelEmail.BackColor = Color.White;
-            labelEmail.Location = new Point(379, 97);
+            labelEmail.Location = new Point(433, 129);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(73, 20);
             labelEmail.TabIndex = 28;
@@ -120,7 +124,7 @@
             // labelPilih
             // 
             labelPilih.AutoSize = true;
-            labelPilih.Location = new Point(12, 56);
+            labelPilih.Location = new Point(14, 75);
             labelPilih.Name = "labelPilih";
             labelPilih.Size = new Size(37, 20);
             labelPilih.TabIndex = 27;
@@ -150,10 +154,11 @@
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 79);
+            dataGridView1.Location = new Point(14, 105);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(355, 244);
+            dataGridView1.Size = new Size(406, 325);
             dataGridView1.TabIndex = 37;
             // 
             // textBox1
@@ -187,9 +192,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 415);
+            pictureBox1.Location = new Point(14, 553);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(97, 25);
+            pictureBox1.Size = new Size(111, 33);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
@@ -213,11 +219,35 @@
             label2.TabIndex = 43;
             label2.Text = "Status :";
             // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button3.Location = new Point(633, 522);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(107, 39);
+            button3.TabIndex = 43;
+            button3.Text = "Batal";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button4.Location = new Point(747, 522);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(107, 39);
+            button4.TabIndex = 42;
+            button4.Text = "Update";
+            button4.UseVisualStyleBackColor = true;
+            // 
             // FormUpdateAlat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(button3);
+            Controls.Add(button4);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(comboBox1);
@@ -226,6 +256,7 @@
             Controls.Add(labelEmail);
             Controls.Add(labelPilih);
             Controls.Add(JConsoleDaftar);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormUpdateAlat";
             Text = "FormUpdateStatus";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -253,5 +284,7 @@
         private PictureBox pictureBox1;
         private TextBox textBox2;
         private Label label2;
+        private Button button3;
+        private Button button4;
     }
 }

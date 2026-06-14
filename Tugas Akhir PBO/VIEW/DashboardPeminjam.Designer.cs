@@ -46,11 +46,11 @@
             dataGridPeminjam.BackgroundColor = Color.White;
             dataGridPeminjam.BorderStyle = BorderStyle.None;
             dataGridPeminjam.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridPeminjam.Location = new Point(228, 158);
+            dataGridPeminjam.Location = new Point(231, 158);
             dataGridPeminjam.Margin = new Padding(3, 4, 3, 4);
             dataGridPeminjam.Name = "dataGridPeminjam";
             dataGridPeminjam.RowHeadersWidth = 51;
-            dataGridPeminjam.Size = new Size(918, 478);
+            dataGridPeminjam.Size = new Size(913, 478);
             dataGridPeminjam.TabIndex = 16;
             // 
             // bPinjam
@@ -92,12 +92,13 @@
             bPengembalian.BackgroundImageLayout = ImageLayout.Zoom;
             bPengembalian.FlatAppearance.BorderSize = 0;
             bPengembalian.FlatStyle = FlatStyle.Flat;
-            bPengembalian.Location = new Point(909, 644);
+            bPengembalian.Location = new Point(908, 644);
             bPengembalian.Margin = new Padding(3, 4, 3, 4);
             bPengembalian.Name = "bPengembalian";
             bPengembalian.Size = new Size(218, 49);
             bPengembalian.TabIndex = 20;
             bPengembalian.UseVisualStyleBackColor = false;
+            bPengembalian.Click += bPengembalian_Click;
             // 
             // linkLabel3
             // 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +15,9 @@ namespace Tugas_Akhir_PBO.VIEW
         public FormDaftarMitra()
         {
             InitializeComponent();
-            List<Object> list_user = new User().GetAllPeminjamAdmin();
+            List<User> list_user = new User().GetAllPeminjamAdmin();
             UserDropDown.DisplayMember = "Nama";
-            UserDropDown.ValueMember = "IdUser";
+            UserDropDown.ValueMember = "Id";
             UserDropDown.DataSource = list_user;
         }
 

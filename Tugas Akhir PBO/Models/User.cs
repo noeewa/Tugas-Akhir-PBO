@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
@@ -84,26 +84,12 @@ public partial class User
             .ToList();
         }
     }
-    public List<object> GetAllPeminjamAdmin()
+    public List<User> GetAllPeminjamAdmin()
     {
         using (var db = new TugasAkhirPboContext())
         {
             return db.Users
-             
-                .Where(u => u.IdPeminjam != null && u.IdPeminjam != 0)
-
-                .Select(u => new
-                {
-                    u.IdUser,
-                    u.Password,
-                    u.Username,
-                    u.Email,
-                    u.IdPeminjam,
-                    u.IdAdmin,
-                    u.IdMitra
-                })
-                .ToList()
-                .Cast<object>()
+                .Where(u => u.IdPeminjam != null && u.IdPeminjam != 0 && (u.IdMitra == null || u.IdMitra == 0))
                 .ToList();
         }
     }
@@ -115,7 +101,6 @@ public partial class User
         {
             var allIds = db.Users
                            .Select(u => u.Id)
-                           .OrderBy(id => id)
                            .ToList();
 
             if (allIds.Count == 0)
@@ -132,17 +117,19 @@ public partial class User
                 }
             }
 
-            int targetAngka = 1;
+            daftarAngka.Sort();
+
+            int targetAngka = 0;
             foreach (int angkaAktif in daftarAngka)
             {
                 if (angkaAktif != targetAngka)
                 {
-                    return targetAngka - 1;
+                    return targetAngka;
                 }
                 targetAngka++;
             }
 
-            return targetAngka - 1;
+            return targetAngka;
         }
     }
 

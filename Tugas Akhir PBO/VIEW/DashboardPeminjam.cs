@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,8 @@ namespace Tugas_Akhir_PBO.VIEW
             try
             {
                 InitializeComponent();
-                dataGridPeminjam.AutoGenerateColumns = false;
+                dataGridPeminjam.AutoGenerateColumns = true;
+                dataGridPeminjam.DataSource = null;
                 dataGridPeminjam.DataSource = new ControllerPeminjam().getJadwal();
             }
             catch (IOException ex)
@@ -53,6 +54,16 @@ namespace Tugas_Akhir_PBO.VIEW
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bPengembalian_Click(object sender, EventArgs e)
+        {
+            if (new FormPengembalian().ShowDialog() == DialogResult.OK)
+            {
+                dataGridPeminjam.DataSource = null;
+                dataGridPeminjam.DataSource = new ControllerPeminjam().getJadwal();
+                this.Show();
+            }
         }
     }
 }

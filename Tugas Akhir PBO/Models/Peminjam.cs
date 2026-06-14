@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
@@ -27,14 +27,10 @@ public partial class Peminjam : Abstract_User
     {
         using (var db = new TugasAkhirPboContext())
         {
-            Peminjam peminjam = new Peminjam()
-            {
-                Id = Id,
-                Nama = Nama,
-                Alamat = Alamat,
-                Kontak = Kontak
-            };
-            db.Peminjams.Add(peminjam);
+            this.Nama = Nama;
+            this.Alamat = Alamat;
+            this.Kontak = Kontak;
+            db.Peminjams.Add(this);
             db.SaveChanges();
         }
     }

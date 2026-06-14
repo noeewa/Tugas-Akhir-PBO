@@ -46,10 +46,13 @@ public partial class Alat
     {
         using (var db = new TugasAkhirPboContext())
         {
-            return db.Alats
+            var query = db.Alats.AsQueryable();
+            if (idMitra.HasValue)
+                query = query.Where(a => a.IdMitra == idMitra.Value);
+
+            return query
                 .Select(a => new
                 {
-                    // Pilih hanya properti/kolom yang ingin ditampilkan di DataGridView
                     a.IdAlat,
                     a.NamaAlat,
                     a.Kategori,
@@ -58,8 +61,8 @@ public partial class Alat
                     a.Status,
                     a.IdMitra
                 })
-                .ToList()          // Ubah ke List objek anonim
-                .Cast<object>()    // Konversi agar sesuai dengan tipe data kembalian List<object>
+                .ToList()
+                .Cast<object>()
                 .ToList();
         }
     }
@@ -95,14 +98,28 @@ public partial class Alat
         }
     }
 
-    public Alat deleteAlat(int IdAlat)
+    public void deleteAlat(int idAlat, int? idMitra)
     {
         using (var db = new TugasAkhirPboContext())
         {
-            var alat = db.Alats.Find(IdAlat);
+            var alat = db.Alats.Find(idAlat);
+            if (alat == null)
+                throw new InvalidOperationException("Alat tidak ditemukan.");
+
+            if (!idMitra.HasValue || alat.IdMitra != idMitra.Value)
+                throw new InvalidOperationException("Alat ini bukan milik mitra Anda.");
+
+            bool sedangDipinjam = db.Jadwals.Any(j =>
+                j.IdAlat == idAlat
+                && j.IdPeminjaman != null
+                && !db.Pengembalians.Any(p => p.IdPeminjaman == j.IdPeminjaman));
+
+            if (sedangDipinjam)
+                throw new InvalidOperationException("Alat tidak dapat dihapus karena masih dalam peminjaman aktif.");
+
+            // Hanya hapus baris alat; mitra pemilik tidak terpengaruh (FK satu arah: alat -> mitra)
             db.Alats.Remove(alat);
             db.SaveChanges();
-            return alat;
         }
     }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Tugas_Akhir_PBO.Models;
@@ -31,11 +31,11 @@ public partial class Peminjaman
         }
     }
 
-    public Peminjaman GetPeminjamanById(string idUser)
+    public List<Peminjaman> GetPeminjamanById(string idUser)
     {
         using (var db = new TugasAkhirPboContext())
         {
-            return db.Peminjamen.FirstOrDefault(u => u.IdUser == idUser);
+            return db.Peminjamen.Where(u => u.IdUser == idUser).ToList();
         }
     }
 

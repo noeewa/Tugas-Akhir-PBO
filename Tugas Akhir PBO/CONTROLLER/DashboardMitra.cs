@@ -25,9 +25,13 @@ namespace Tugas_Akhir_PBO.CONTROLLER
             List<object> alat = new Alat().getAlat(this.getMitra());
             return alat;
         }
-        public void deleteAlat(int IdAlat)
+        public void deleteAlat(int idAlat)
         {
-            new Alat().deleteAlat(IdAlat);
+            int? idMitra = getMitra();
+            if (!idMitra.HasValue)
+                throw new InvalidOperationException("Sesi mitra tidak valid. Silakan login kembali.");
+
+            new Alat().deleteAlat(idAlat, idMitra);
         }
         public Alat TambahAlat(Alat alatRegis)
         {

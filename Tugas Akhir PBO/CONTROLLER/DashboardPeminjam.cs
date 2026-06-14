@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Tugas_Akhir_PBO.Models;
@@ -7,7 +7,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
 {
     internal class ControllerPeminjam
     {
-        public Peminjaman getJadwal()
+        public List<Peminjaman> getJadwal()
         {
             string idUser = UserSession.UserId;
             return new Peminjaman().GetPeminjamanById(idUser);

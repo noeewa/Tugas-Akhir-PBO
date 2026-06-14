@@ -35,11 +35,11 @@
             comboBox1 = new ComboBox();
             dateTimePicker1 = new DateTimePicker();
             label0 = new Label();
-            dataGridView2 = new DataGridView();
+            dataListAlat = new DataGridView();
             LoginButton = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataListAlat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             // 
             JConsoleRiwayat.AutoSize = true;
             JConsoleRiwayat.Font = new Font("Inter Tight ExtraBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            JConsoleRiwayat.Location = new Point(12, 7);
+            JConsoleRiwayat.Location = new Point(14, 9);
             JConsoleRiwayat.Name = "JConsoleRiwayat";
             JConsoleRiwayat.Size = new Size(278, 40);
             JConsoleRiwayat.TabIndex = 2;
@@ -92,28 +92,30 @@
             // 
             label0.AutoSize = true;
             label0.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label0.Location = new Point(12, 47);
+            label0.Location = new Point(14, 63);
             label0.Name = "label0";
             label0.Size = new Size(67, 24);
             label0.TabIndex = 32;
             label0.Text = "List Alat";
             // 
-            // dataGridView2
+            // dataListAlat
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 74);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(776, 135);
-            dataGridView2.TabIndex = 31;
+            dataListAlat.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataListAlat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataListAlat.Location = new Point(14, 99);
+            dataListAlat.Margin = new Padding(3, 4, 3, 4);
+            dataListAlat.Name = "dataListAlat";
+            dataListAlat.RowHeadersWidth = 51;
+            dataListAlat.Size = new Size(887, 180);
+            dataListAlat.TabIndex = 31;
             // 
             // LoginButton
             // 
             LoginButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            LoginButton.Location = new Point(666, 359);
+            LoginButton.Location = new Point(761, 479);
+            LoginButton.Margin = new Padding(3, 4, 3, 4);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(94, 29);
+            LoginButton.Size = new Size(107, 39);
             LoginButton.TabIndex = 33;
             LoginButton.Text = "Ajukan";
             LoginButton.UseVisualStyleBackColor = true;
@@ -121,9 +123,10 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.Location = new Point(562, 359);
+            button1.Location = new Point(642, 479);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(107, 39);
             button1.TabIndex = 34;
             button1.Text = "Batal";
             button1.UseVisualStyleBackColor = true;
@@ -132,27 +135,29 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 413);
+            pictureBox1.Location = new Point(14, 551);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(97, 25);
+            pictureBox1.Size = new Size(111, 33);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
             // 
             // FormPengembalian
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(LoginButton);
             Controls.Add(label0);
-            Controls.Add(dataGridView2);
+            Controls.Add(dataListAlat);
             Controls.Add(JConsoleRiwayat);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPengembalian";
             Text = "FormPengembalian";
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataListAlat).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -166,7 +171,7 @@
         private ComboBox comboBox1;
         private DateTimePicker dateTimePicker1;
         private Label label0;
-        private DataGridView dataGridView2;
+        private DataGridView dataListAlat;
         private Button LoginButton;
         private Button button1;
         private PictureBox pictureBox1;

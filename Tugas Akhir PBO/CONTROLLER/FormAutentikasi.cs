@@ -1,4 +1,4 @@
-﻿
+
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -45,7 +45,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
                 Nama = user.Nama,
                 Emails = user.Emails,
                 Pass = user.Pass,
-                IdPeminjam = peminjamRegis.getLastId()
+                IdPeminjam = peminjamRegis.Id
             };
 
             userRegis.insertUser();

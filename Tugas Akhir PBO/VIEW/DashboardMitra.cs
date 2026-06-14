@@ -18,7 +18,7 @@ namespace Tugas_Akhir_PBO.VIEW
             {
                 InitializeComponent();
                 dataGridAlat.DataSource = null;
-                dataGridAlat.DataSource = new ControllerMitra().GetAllAlat;
+                dataGridAlat.DataSource = new ControllerMitra().GetAllAlat();
             }
             catch (IOException ex)
             {
@@ -41,45 +41,41 @@ namespace Tugas_Akhir_PBO.VIEW
 
         private void DeleteUserButton_Click(object sender, EventArgs e)
         {
-            if (dataGridAlat.CurrentRow != null)
+            if (dataGridAlat.CurrentRow == null || dataGridAlat.CurrentRow.IsNewRow)
             {
-                DataGridViewRow barisPilihan = dataGridAlat.CurrentRow;
-                int idAlat = Convert.ToInt32(barisPilihan.Cells["IdAlat"].Value);
-
-
-                if (idAlat > 0)
-                {
-                    MessageBox.Show("ID Alat tidak valid atau kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                DialogResult result = MessageBox.Show(
-                    $"Apakah Anda yakin ingin menghapus user dengan ID: {idAlat}?",
-                    "Konfirmasi Hapus",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning
-                );
-
-                if (result == DialogResult.Yes)
-                {
-                    try
-                    {
-                        new ControllerMitra().deleteAlat(idAlat);
-
-                        MessageBox.Show("User berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        dataGridAlat.DataSource = null;
-                        dataGridAlat.DataSource = new ControllerMitra().GetAllAlat();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Gagal menghapus: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                MessageBox.Show("Silakan pilih alat yang ingin dihapus terlebih dahulu!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
-            else
+
+            DataGridViewRow barisPilihan = dataGridAlat.CurrentRow;
+            object? idCell = barisPilihan.Cells["IdAlat"]?.Value;
+            if (idCell == null || !int.TryParse(idCell.ToString(), out int idAlat) || idAlat <= 0)
             {
-                MessageBox.Show("Silakan klik salah satu baris user di tabel terlebih dahulu!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("ID alat tidak valid atau kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string namaAlat = barisPilihan.Cells["NamaAlat"]?.Value?.ToString() ?? $"ID {idAlat}";
+            DialogResult result = MessageBox.Show(
+                $"Apakah Anda yakin ingin menghapus alat \"{namaAlat}\"?\n\nData mitra pemilik tidak akan terhapus.",
+                "Konfirmasi Hapus Alat",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result != DialogResult.Yes)
+                return;
+
+            try
+            {
+                new ControllerMitra().deleteAlat(idAlat);
+                MessageBox.Show("Alat berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridAlat.DataSource = null;
+                dataGridAlat.DataSource = new ControllerMitra().GetAllAlat();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal menghapus alat: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
