@@ -32,7 +32,6 @@
             JConsoleDaftar = new Label();
             labelAlamat = new Label();
             labelNomorHp = new Label();
-            labelEmail = new Label();
             labelNama = new Label();
             AlamatTextBox = new RichTextBox();
             NomorHpBox = new TextBox();
@@ -42,7 +41,6 @@
             pictureBox1 = new PictureBox();
             UserDropDown = new ComboBox();
             label1 = new Label();
-            JenisBox = new TextBox();
             Deskripsi = new Label();
             DeskripsiBox = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -61,7 +59,7 @@
             // labelAlamat
             // 
             labelAlamat.AutoSize = true;
-            labelAlamat.Location = new Point(51, 318);
+            labelAlamat.Location = new Point(51, 264);
             labelAlamat.Name = "labelAlamat";
             labelAlamat.Size = new Size(57, 20);
             labelAlamat.TabIndex = 19;
@@ -70,20 +68,11 @@
             // labelNomorHp
             // 
             labelNomorHp.AutoSize = true;
-            labelNomorHp.Location = new Point(51, 264);
+            labelNomorHp.Location = new Point(51, 210);
             labelNomorHp.Name = "labelNomorHp";
             labelNomorHp.Size = new Size(79, 20);
             labelNomorHp.TabIndex = 18;
             labelNomorHp.Text = "Nomor HP";
-            // 
-            // labelEmail
-            // 
-            labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(51, 130);
-            labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(40, 20);
-            labelEmail.TabIndex = 15;
-            labelEmail.Text = "Jenis";
             // 
             // labelNama
             // 
@@ -97,7 +86,7 @@
             // AlamatTextBox
             // 
             AlamatTextBox.BorderStyle = BorderStyle.FixedSingle;
-            AlamatTextBox.Location = new Point(207, 318);
+            AlamatTextBox.Location = new Point(207, 264);
             AlamatTextBox.Name = "AlamatTextBox";
             AlamatTextBox.Size = new Size(284, 57);
             AlamatTextBox.TabIndex = 25;
@@ -106,7 +95,7 @@
             // NomorHpBox
             // 
             NomorHpBox.BorderStyle = BorderStyle.FixedSingle;
-            NomorHpBox.Location = new Point(207, 264);
+            NomorHpBox.Location = new Point(207, 210);
             NomorHpBox.Name = "NomorHpBox";
             NomorHpBox.Size = new Size(284, 27);
             NomorHpBox.TabIndex = 24;
@@ -166,18 +155,10 @@
             label1.TabIndex = 30;
             label1.Text = "Penanggung Jawab :";
             // 
-            // JenisBox
-            // 
-            JenisBox.BorderStyle = BorderStyle.FixedSingle;
-            JenisBox.Location = new Point(207, 123);
-            JenisBox.Name = "JenisBox";
-            JenisBox.Size = new Size(284, 27);
-            JenisBox.TabIndex = 32;
-            // 
             // Deskripsi
             // 
             Deskripsi.AutoSize = true;
-            Deskripsi.Location = new Point(51, 185);
+            Deskripsi.Location = new Point(51, 131);
             Deskripsi.Name = "Deskripsi";
             Deskripsi.Size = new Size(69, 20);
             Deskripsi.TabIndex = 16;
@@ -186,7 +167,7 @@
             // DeskripsiBox
             // 
             DeskripsiBox.BorderStyle = BorderStyle.FixedSingle;
-            DeskripsiBox.Location = new Point(207, 183);
+            DeskripsiBox.Location = new Point(207, 129);
             DeskripsiBox.Name = "DeskripsiBox";
             DeskripsiBox.Size = new Size(284, 57);
             DeskripsiBox.TabIndex = 33;
@@ -198,7 +179,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(DeskripsiBox);
-            Controls.Add(JenisBox);
             Controls.Add(UserDropDown);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -210,7 +190,6 @@
             Controls.Add(labelAlamat);
             Controls.Add(labelNomorHp);
             Controls.Add(Deskripsi);
-            Controls.Add(labelEmail);
             Controls.Add(labelNama);
             Controls.Add(JConsoleDaftar);
             Name = "FormDaftarMitra";
@@ -225,7 +204,6 @@
         private Label JConsoleDaftar;
         private Label labelAlamat;
         private Label labelNomorHp;
-        private Label labelEmail;
         private Label labelNama;
         private RichTextBox AlamatTextBox;
         private TextBox NomorHpBox;
@@ -235,7 +213,6 @@
         private PictureBox pictureBox1;
         private ComboBox UserDropDown;
         private Label label1;
-        private TextBox JenisBox;
         private Label Deskripsi;
         private RichTextBox DeskripsiBox;
     }

@@ -76,7 +76,6 @@ public partial class TugasAkhirPboContext : DbContext
                 .HasMaxLength(150)
                 .HasColumnName("nama_alat");
             entity.Property(e => e.Status)
-                .HasMaxLength(20)
                 .HasColumnName("status");
 
             entity.HasOne(d => d.IdMitraNavigation).WithMany(p => p.Alats)
@@ -103,9 +102,7 @@ public partial class TugasAkhirPboContext : DbContext
             entity.Property(e => e.IdPeminjaman)
                 .HasMaxLength(50)
                 .HasColumnName("id_peminjaman");
-            entity.Property(e => e.StatusJadwal)
-                .HasMaxLength(50)
-                .HasColumnName("status_jadwal");
+
             entity.Property(e => e.TanggalMulai).HasColumnName("tanggal_mulai");
             entity.Property(e => e.TanggalSelesai).HasColumnName("tanggal_selesai");
 
@@ -144,9 +141,6 @@ public partial class TugasAkhirPboContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id_mitra");
             entity.Property(e => e.Alamat).HasColumnName("alamat");
             entity.Property(e => e.Deskripsi).HasColumnName("deskripsi");
-            entity.Property(e => e.JenisMitra)
-                .HasMaxLength(50)
-                .HasColumnName("jenis_mitra");
             entity.Property(e => e.Kontak)
                 .HasMaxLength(20)
                 .HasColumnName("kontak");

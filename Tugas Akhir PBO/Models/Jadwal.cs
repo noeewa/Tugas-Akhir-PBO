@@ -15,8 +15,6 @@ public partial class Jadwal
 
     public DateOnly? TanggalSelesai { get; set; }
 
-    public string? StatusJadwal { get; set; }
-
     public virtual Alat? IdAlatNavigation { get; set; }
 
     public virtual Peminjaman? IdPeminjamanNavigation { get; set; }
@@ -36,7 +34,7 @@ public partial class Jadwal
             return db.Jadwals.ToList();
         }
     }
-    public Jadwal inputJadwal(string idJadwal, int idAlat, DateOnly? tanggalMulai, DateOnly? tanggalSelesai, string? statusJadwal, string? idPeminjaman)
+    public Jadwal inputJadwal(string idJadwal, int idAlat, DateOnly? tanggalMulai, DateOnly? tanggalSelesai, string? idPeminjaman)
     {
         using (var db = new TugasAkhirPboContext())
         {
@@ -46,7 +44,6 @@ public partial class Jadwal
                 IdAlat = idAlat,
                 TanggalMulai = tanggalMulai,
                 TanggalSelesai = tanggalSelesai,
-                StatusJadwal = statusJadwal,
                 IdPeminjaman = idPeminjaman
             };
 

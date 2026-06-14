@@ -15,7 +15,7 @@ public partial class Alat
 
     public string? Deskripsi { get; set; }
 
-    public string? Status { get; set; }
+    public bool? Status { get; set; }
 
     public int? IdMitra { get; set; }
 
@@ -74,7 +74,7 @@ public partial class Alat
         }
     }
 
-    public Alat updateAlat(int IdAlat, string NamaAlat, string kategori, string Kondisi, string Deskripsi, string status, int IdMitra)
+    public Alat updateAlat(int IdAlat, string NamaAlat, string kategori, string Kondisi, string Deskripsi, bool status, int IdMitra)
     {
         using (var db = new TugasAkhirPboContext())
         {

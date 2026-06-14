@@ -10,8 +10,6 @@ public partial class Mitra : Abstarct_User
 
     public string? Nama { get; set; }
 
-    public string? JenisMitra { get; set; }
-
     public string? Alamat { get; set; }
 
     public string? Kontak { get; set; }
@@ -107,7 +105,7 @@ public partial class Mitra : Abstarct_User
         }
     }
 
-    public void updateMitra(int IdMitra, string NamaMitra, string JenisMitra, string Alamat, string Kontak, string Deskripsi)
+    public void updateMitra(int IdMitra, string NamaMitra, string Alamat, string Kontak, string Deskripsi)
     {
         using (var db = new TugasAkhirPboContext())
         {
@@ -115,7 +113,6 @@ public partial class Mitra : Abstarct_User
             {
                 Id = IdMitra,
                 Nama = NamaMitra,
-                JenisMitra = JenisMitra,
                 Alamat = Alamat,
                 Kontak = Kontak,
                 Deskripsi = Deskripsi,
