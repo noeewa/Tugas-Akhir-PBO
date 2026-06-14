@@ -1,12 +1,14 @@
-//using Tugas_Akhir_PBO.VIEW;
-//using Tugas_Akhir_PBO.MODEL;
-//using Tugas_Akhir_PBO.CONTROLLER;
-//using Tugas_Akhir_PBO.Models;
+using Tugas_Akhir_PBO.VIEW;
+using Tugas_Akhir_PBO.CONTROLLER;
+using Tugas_Akhir_PBO.Models;
 
 namespace Tugas_Akhir_PBO
 {
     internal static class Program
     {
+        [STAThread]
+        static void Main()
+        {
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -15,7 +17,7 @@ namespace Tugas_Akhir_PBO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormLogin());
+            Application.Run(new FormLogin());
         }
     }
 }
