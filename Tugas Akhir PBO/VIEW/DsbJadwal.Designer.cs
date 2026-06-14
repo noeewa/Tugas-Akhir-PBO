@@ -40,42 +40,45 @@
             // 
             // dataGridUser
             // 
+            dataGridUser.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridUser.BackgroundColor = Color.White;
             dataGridUser.BorderStyle = BorderStyle.None;
             dataGridUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridUser.Location = new Point(183, 92);
-            dataGridUser.Margin = new Padding(3, 2, 3, 2);
+            dataGridUser.Location = new Point(229, 260);
+            dataGridUser.Margin = new Padding(3, 4, 3, 4);
             dataGridUser.Name = "dataGridUser";
             dataGridUser.RowHeadersWidth = 51;
-            dataGridUser.Size = new Size(679, 299);
+            dataGridUser.Size = new Size(907, 377);
             dataGridUser.TabIndex = 18;
             // 
             // bRefresh
             // 
+            bRefresh.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             bRefresh.BackColor = Color.White;
             bRefresh.BackgroundImage = (Image)resources.GetObject("bRefresh.BackgroundImage");
             bRefresh.BackgroundImageLayout = ImageLayout.Zoom;
             bRefresh.FlatAppearance.BorderSize = 0;
             bRefresh.FlatStyle = FlatStyle.Flat;
-            bRefresh.Location = new Point(657, 395);
-            bRefresh.Margin = new Padding(3, 2, 3, 2);
+            bRefresh.Location = new Point(820, 650);
+            bRefresh.Margin = new Padding(3, 4, 3, 4);
             bRefresh.Name = "bRefresh";
-            bRefresh.Size = new Size(81, 40);
+            bRefresh.Size = new Size(106, 37);
             bRefresh.TabIndex = 30;
             bRefresh.UseVisualStyleBackColor = false;
             bRefresh.Click += bRefresh_Click;
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.BackColor = Color.White;
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(744, 388);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(959, 650);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(126, 54);
+            button1.Size = new Size(165, 37);
             button1.TabIndex = 32;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -93,25 +96,27 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, -9);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(902, 573);
+            pictureBox1.Size = new Size(1177, 999);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 46;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // DsbJadwal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(901, 562);
+            ClientSize = new Size(1177, 999);
             Controls.Add(button1);
             Controls.Add(bRefresh);
             Controls.Add(dataGridUser);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "DsbJadwal";
             Text = "DsbJadwal";
             ((System.ComponentModel.ISupportInitialize)dataGridUser).EndInit();

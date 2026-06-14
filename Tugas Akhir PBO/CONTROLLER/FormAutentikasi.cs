@@ -17,7 +17,6 @@ namespace Tugas_Akhir_PBO.CONTROLLER
 
             if (user == null)
             {
-                MessageBox.Show("Username atau password salah!");
                 return null;
             }
             else

@@ -43,20 +43,20 @@
             // 
             // PasswordBox
             // 
-            PasswordBox.Location = new Point(636, 374);
-            PasswordBox.Margin = new Padding(4, 2, 4, 2);
+            PasswordBox.Location = new Point(717, 486);
+            PasswordBox.Margin = new Padding(5, 3, 5, 3);
             PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(248, 27);
+            PasswordBox.Size = new Size(283, 27);
             PasswordBox.TabIndex = 0;
             PasswordBox.UseSystemPasswordChar = true;
             PasswordBox.TextChanged += PasswordBox_TextChanged;
             // 
             // UsernameBox
             // 
-            UsernameBox.Location = new Point(636, 291);
-            UsernameBox.Margin = new Padding(4, 2, 4, 2);
+            UsernameBox.Location = new Point(717, 403);
+            UsernameBox.Margin = new Padding(5, 3, 5, 3);
             UsernameBox.Name = "UsernameBox";
-            UsernameBox.Size = new Size(248, 27);
+            UsernameBox.Size = new Size(283, 27);
             UsernameBox.TabIndex = 1;
             UsernameBox.TextChanged += UsernameBox_TextChanged;
             // 
@@ -66,8 +66,8 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Green;
-            label1.Location = new Point(636, 257);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(717, 370);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(72, 18);
             label1.TabIndex = 2;
@@ -79,8 +79,8 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Green;
-            label2.Location = new Point(639, 337);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(717, 456);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
             label2.Size = new Size(67, 18);
             label2.TabIndex = 3;
@@ -88,42 +88,45 @@
             // 
             // LoginButton
             // 
+            LoginButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             LoginButton.BackColor = Color.White;
             LoginButton.BackgroundImage = (Image)resources.GetObject("LoginButton.BackgroundImage");
             LoginButton.BackgroundImageLayout = ImageLayout.Zoom;
             LoginButton.FlatAppearance.BorderSize = 0;
             LoginButton.FlatStyle = FlatStyle.Flat;
-            LoginButton.Location = new Point(725, 417);
-            LoginButton.Margin = new Padding(4, 2, 4, 2);
+            LoginButton.Location = new Point(817, 539);
+            LoginButton.Margin = new Padding(5, 3, 5, 3);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(160, 52);
+            LoginButton.Size = new Size(190, 43);
             LoginButton.TabIndex = 5;
             LoginButton.UseVisualStyleBackColor = false;
             LoginButton.Click += LoginButton_Click;
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button1.BackColor = Color.White;
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(636, 417);
-            button1.Margin = new Padding(4, 2, 4, 2);
+            button1.Location = new Point(702, 539);
+            button1.Margin = new Padding(5, 3, 5, 3);
             button1.Name = "button1";
-            button1.Size = new Size(82, 52);
+            button1.Size = new Size(94, 43);
             button1.TabIndex = 6;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // pictureBox5
             // 
+            pictureBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(-5, -6);
-            pictureBox5.Margin = new Padding(4);
+            pictureBox5.Location = new Point(0, 0);
+            pictureBox5.Margin = new Padding(5);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(511, 670);
+            pictureBox5.Size = new Size(584, 879);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 11;
             pictureBox5.TabStop = false;
@@ -131,12 +134,13 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(470, 2);
-            pictureBox6.Margin = new Padding(4);
+            pictureBox6.Location = new Point(537, 0);
+            pictureBox6.Margin = new Padding(5);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(591, 670);
+            pictureBox6.Size = new Size(640, 879);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 12;
             pictureBox6.TabStop = false;
@@ -146,7 +150,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 659);
+            ClientSize = new Size(1177, 879);
             Controls.Add(LoginButton);
             Controls.Add(pictureBox5);
             Controls.Add(button1);
@@ -155,7 +159,7 @@
             Controls.Add(UsernameBox);
             Controls.Add(PasswordBox);
             Controls.Add(pictureBox6);
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(5, 3, 5, 3);
             Name = "FormLogin";
             Text = "Form1";
             Load += FormLogin_Load;

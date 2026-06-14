@@ -100,6 +100,7 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Location = new Point(12, 74);
             dataGridView2.Name = "dataGridView2";
@@ -109,6 +110,7 @@
             // 
             // LoginButton
             // 
+            LoginButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             LoginButton.Location = new Point(666, 359);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(94, 29);
@@ -118,6 +120,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.Location = new Point(562, 359);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
@@ -138,7 +141,7 @@
             // 
             // FormPengembalian
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);

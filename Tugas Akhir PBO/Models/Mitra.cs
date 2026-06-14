@@ -39,32 +39,27 @@ public partial class Mitra : Abstract_User
     {
         using (var db = new TugasAkhirPboContext())
         {
-            // 1. Ambil semua id_mitra langsung sebagai angka, urutkan dari yang terkecil
             var allIds = db.Mitras
                            .Select(m => m.Id)
                            .OrderBy(id => id)
                            .ToList();
 
-            // 2. Jika database masih kosong (belum ada mitra sama sekali), mulai dari angka 0
             if (allIds.Count == 0)
             {
                 return 0;
             }
 
-            // 3. Cari angka/ID yang bolong mulai dari angka 1
             int targetAngka = 1;
             foreach (int idAktif in allIds)
             {
-                // Jika ID di database melompati targetAngka,
-                // artinya targetAngka tersebut hilang karena pernah dihapus
+
                 if (idAktif != targetAngka)
                 {
-                    return targetAngka - 1; // Dikurangi 1 karena nanti saat Insert akan ditambah 1
+                    return targetAngka - 1;
                 }
                 targetAngka++;
             }
 
-            // 4. Jika semua ID berurutan rapi tanpa ada yang bolong, kembalikan ID tertinggi saat ini
             return targetAngka - 1;
         }
     }
@@ -74,7 +69,7 @@ public partial class Mitra : Abstract_User
         {
             return db.Mitras.Select(u => new
             {
-                // Tentukan kolom apa saja yang ingin diambil di sini:
+ 
                 u.Id,
                 u.Nama,
                 u.Alamat,
@@ -82,8 +77,8 @@ public partial class Mitra : Abstract_User
                 u.Deskripsi,
                 u.Users
             })
-            .ToList()          // Ubah ke List objek anonim
-            .Cast<object>()    // Konversi agar sesuai dengan tipe data kembalian List<object>
+            .ToList()          
+            .Cast<object>() 
             .ToList();
         }
     }

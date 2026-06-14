@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Tugas_Akhir_PBO.CONTROLLER;
 using Tugas_Akhir_PBO.Models;
 using Tugas_Akhir_PBO.VIEW;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Tugas_Akhir_PBO.VIEW
 {
@@ -18,8 +19,8 @@ namespace Tugas_Akhir_PBO.VIEW
             try
             {
                 InitializeComponent();
-                dataGridUser.AutoGenerateColumns = false;
-                dataGridUser.DataSource = ControllerPeminjam.getJadwal();
+                dataGridPeminjam.AutoGenerateColumns = false;
+                dataGridPeminjam.DataSource = new ControllerPeminjam().getJadwal();
             }
             catch (IOException ex)
             {
@@ -35,6 +36,21 @@ namespace Tugas_Akhir_PBO.VIEW
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void bPinjam_Click(object sender, EventArgs e)
+        {
+            if (new FormPinjam().ShowDialog() == DialogResult.OK)
+            {
+                dataGridPeminjam.DataSource = null;
+                dataGridPeminjam.DataSource = new ControllerPeminjam().getJadwal();
+                this.Show();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

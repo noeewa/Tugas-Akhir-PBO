@@ -73,6 +73,7 @@
             // 
             // AlatGridBox
             // 
+            AlatGridBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             AlatGridBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AlatGridBox.Location = new Point(12, 86);
             AlatGridBox.Name = "AlatGridBox";
@@ -117,6 +118,7 @@
             // 
             // AlatListBox
             // 
+            AlatListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             AlatListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AlatListBox.Location = new Point(395, 86);
             AlatListBox.Name = "AlatListBox";
@@ -182,6 +184,7 @@
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button4.Location = new Point(572, 389);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
@@ -192,6 +195,7 @@
             // 
             // LoginButton
             // 
+            LoginButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             LoginButton.Location = new Point(676, 389);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(94, 29);
@@ -201,7 +205,7 @@
             // 
             // FormPinjam
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button4);

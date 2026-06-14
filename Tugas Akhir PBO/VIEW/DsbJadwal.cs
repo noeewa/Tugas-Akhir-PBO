@@ -24,5 +24,10 @@ namespace Tugas_Akhir_PBO.VIEW
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

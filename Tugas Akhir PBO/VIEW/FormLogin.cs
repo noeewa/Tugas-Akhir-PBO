@@ -53,17 +53,14 @@ namespace Tugas_Akhir_PBO
             FormDaftar formdaftar = new FormDaftar();
             this.Hide();
 
-            // Jalankan form daftar sebagai dialog tunggal
             if (formdaftar.ShowDialog() == DialogResult.OK)
             {
-                // Jika tombol di form daftar mengirim sinyal DialogResult.OK
-                // Tampilkan kembali form ini
                 this.Show();
             }
             else
             {
-                // Jika user menutup form daftar tanpa daftar (Klik X atau Cancel)
-                Application.Exit(); // Atau Application.Exit() tergantung skenario Anda
+             
+                Application.Exit();
             }
 
         }

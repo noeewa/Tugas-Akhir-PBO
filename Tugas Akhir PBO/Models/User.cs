@@ -71,7 +71,6 @@ public partial class User
             return db.Users
             .Select(u => new
             {
-                // Tentukan kolom apa saja yang ingin diambil di sini:
                 u.IdUser,
                 u.Password,
                 u.Username,
@@ -80,8 +79,8 @@ public partial class User
                 u.IdAdmin,
                 u.IdMitra
             })
-            .ToList()          // Ubah ke List objek anonim
-            .Cast<object>()    // Konversi agar sesuai dengan tipe data kembalian List<object>
+            .ToList()          
+            .Cast<object>()    
             .ToList();
         }
     }

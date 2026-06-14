@@ -128,6 +128,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.Location = new Point(537, 285);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
@@ -137,6 +138,7 @@
             // 
             // button0
             // 
+            button0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button0.Location = new Point(637, 285);
             button0.Name = "button0";
             button0.Size = new Size(94, 29);
@@ -146,6 +148,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 79);
             dataGridView1.Name = "dataGridView1";
@@ -212,7 +215,7 @@
             // 
             // FormUpdateAlat
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);

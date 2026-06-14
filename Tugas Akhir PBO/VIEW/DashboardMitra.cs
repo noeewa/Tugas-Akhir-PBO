@@ -17,6 +17,7 @@ namespace Tugas_Akhir_PBO.VIEW
             try
             {
                 InitializeComponent();
+                dataGridAlat.DataSource = null;
                 dataGridAlat.DataSource = new ControllerMitra().GetAllAlat;
             }
             catch (IOException ex)
@@ -48,7 +49,7 @@ namespace Tugas_Akhir_PBO.VIEW
 
                 if (idAlat > 0)
                 {
-                    MessageBox.Show("ID User tidak valid atau kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("ID Alat tidak valid atau kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
