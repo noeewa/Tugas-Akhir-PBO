@@ -97,6 +97,7 @@ namespace Tugas_Akhir_PBO.VIEW
                             nextPmjNum++;
                         }
                         string newIdPeminjaman = "PMJ-" + nextPmjNum.ToString("D3");
+
                         string detail = string.Join(", ", list_alat.Select(a => a.NamaAlat));
                         Peminjaman peminjaman = new Peminjaman()
                         {
@@ -107,37 +108,18 @@ namespace Tugas_Akhir_PBO.VIEW
                             TanggalKembali = DateEndPick.Value.ToString("yyyy-MM-dd")
                         };
                         db.Peminjamen.Add(peminjaman);
-                        var allJdws = db.Jadwals.Select(j => j.IdJadwal).ToList();
-                        List<int> jdwNumbers = new List<int>();
-                        foreach (var id in allJdws)
-                        {
-                            if (id != null && id.StartsWith("JDW-") && int.TryParse(id.Substring(4), out int num))
-                            {
-                                jdwNumbers.Add(num);
-                            }
-                        }
-                        jdwNumbers.Sort();
-                        int nextJdwNum = 0;
-                        foreach (int n in jdwNumbers)
-                        {
-                            if (n != nextJdwNum) break;
-                            nextJdwNum++;
-                        }
 
+                        var newJadwal = new Jadwal();
                         foreach (var selectedAlat in list_alat)
                         {
-                            string newIdJadwal = "JDW-" + nextJdwNum.ToString("D3");
-                            nextJdwNum++;
+                            string newIdJadwal = newJadwal.inputJadwal(
+                                idJadwal: null,
+                                idAlat: selectedAlat.IdAlat,
+                                tanggalMulai: DateOnly.FromDateTime(DateStartPick.Value),
+                                tanggalSelesai: DateOnly.FromDateTime(DateEndPick.Value),
+                                idPeminjaman: newIdPeminjaman
+                            ).IdJadwal;
 
-                            Jadwal jadwal = new Jadwal()
-                            {
-                                IdJadwal = newIdJadwal,
-                                IdAlat = selectedAlat.IdAlat,
-                                TanggalMulai = DateOnly.FromDateTime(DateStartPick.Value),
-                                TanggalSelesai = DateOnly.FromDateTime(DateEndPick.Value),
-                                IdPeminjaman = newIdPeminjaman
-                            };
-                            db.Jadwals.Add(jadwal);
                             var alatToUpdate = db.Alats.Find(selectedAlat.IdAlat);
                             if (alatToUpdate != null)
                             {

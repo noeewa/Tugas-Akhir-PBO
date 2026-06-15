@@ -17,6 +17,7 @@ namespace Tugas_Akhir_PBO.VIEW
         public DsbDetailPeminjaman(string idPeminjaman)
         {
             InitializeComponent();
+            this.idPeminjaman = idPeminjaman;
             DataGridDetail.AutoGenerateColumns = true;
         }
 
@@ -35,16 +36,22 @@ namespace Tugas_Akhir_PBO.VIEW
 
             using (var db = new TugasAkhirPboContext())
             {
-                var detail = db.Peminjamen
-                    .Include(p => p.IdUserNavigation)
-                    .Where(p => p.IdPeminjaman == idPeminjaman)
-                    .Select(p => new
+                var detail = db.Jadwals
+                    .Include(j => j.IdPeminjamanNavigation)
+                        .ThenInclude(p => p.IdUserNavigation)
+                    .Include(j => j.IdAlatNavigation)
+                    .Where(j => j.IdPeminjaman == idPeminjaman)
+                    .Select(j => new
                     {
-                        p.IdPeminjaman,
-                        NamaUser = p.IdUserNavigation != null ? p.IdUserNavigation.Nama : "",
-                        p.TanggalPeminjaman,
-                        p.TanggalKembali,
-                        p.DetailPeminjaman
+                        j.IdPeminjaman,
+                        NamaUser = j.IdPeminjamanNavigation != null && j.IdPeminjamanNavigation.IdUserNavigation != null
+                            ? j.IdPeminjamanNavigation.IdUserNavigation.Nama
+                            : "",
+                        j.IdPeminjamanNavigation.TanggalPeminjaman,
+                        j.IdPeminjamanNavigation.TanggalKembali,
+                        j.IdAlatNavigation.NamaAlat,
+                        TanggalMulai = j.TanggalMulai,
+                        TanggalSelesai = j.TanggalSelesai
                     })
                     .ToList();
 

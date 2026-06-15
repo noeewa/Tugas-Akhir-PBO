@@ -61,7 +61,7 @@ public partial class Jadwal
             return db.Jadwals.ToList();
         }
     }
-    public Jadwal inputJadwal(string idJadwal, int idAlat, DateOnly? tanggalMulai, DateOnly? tanggalSelesai, string? idPeminjaman)
+    public Jadwal inputJadwal(string? idJadwal, int idAlat, DateOnly? tanggalMulai, DateOnly? tanggalSelesai, string? idPeminjaman)
     {
         using (var db = new TugasAkhirPboContext())
         {
