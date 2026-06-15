@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbJadwal));
             dataGridUser = new DataGridView();
             bRefresh = new Button();
-            button1 = new Button();
+            DetailPeminjaman = new Button();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             Back = new Label();
@@ -68,20 +68,21 @@
             bRefresh.UseVisualStyleBackColor = false;
             bRefresh.Click += bRefresh_Click;
             // 
-            // button1
+            // DetailPeminjaman
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.White;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(959, 650);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(165, 37);
-            button1.TabIndex = 32;
-            button1.UseVisualStyleBackColor = false;
+            DetailPeminjaman.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            DetailPeminjaman.BackColor = Color.White;
+            DetailPeminjaman.BackgroundImage = (Image)resources.GetObject("DetailPeminjaman.BackgroundImage");
+            DetailPeminjaman.BackgroundImageLayout = ImageLayout.Zoom;
+            DetailPeminjaman.FlatAppearance.BorderSize = 0;
+            DetailPeminjaman.FlatStyle = FlatStyle.Flat;
+            DetailPeminjaman.Location = new Point(959, 650);
+            DetailPeminjaman.Margin = new Padding(3, 4, 3, 4);
+            DetailPeminjaman.Name = "DetailPeminjaman";
+            DetailPeminjaman.Size = new Size(165, 37);
+            DetailPeminjaman.TabIndex = 32;
+            DetailPeminjaman.UseVisualStyleBackColor = false;
+            DetailPeminjaman.Click += DetailPeminjaman_Click;
             // 
             // linkLabel1
             // 
@@ -119,6 +120,7 @@
             Back.Size = new Size(46, 24);
             Back.TabIndex = 50;
             Back.Text = "Back";
+            Back.Click += Back_Click;
             // 
             // DsbJadwal
             // 
@@ -126,7 +128,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1177, 999);
             Controls.Add(Back);
-            Controls.Add(button1);
+            Controls.Add(DetailPeminjaman);
             Controls.Add(bRefresh);
             Controls.Add(dataGridUser);
             Controls.Add(pictureBox1);
@@ -142,7 +144,7 @@
         #endregion
         private DataGridView dataGridUser;
         private Button bRefresh;
-        private Button button1;
+        private Button DetailPeminjaman;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
         private Label Back;

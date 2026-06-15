@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbDetailPeminjaman));
-            dataGridUser = new DataGridView();
+            DataGridDetail = new DataGridView();
             bRefresh = new Button();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             Back = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridDetail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // dataGridUser
+            // DataGridDetail
             // 
-            dataGridUser.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridUser.BackgroundColor = Color.White;
-            dataGridUser.BorderStyle = BorderStyle.None;
-            dataGridUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridUser.Location = new Point(233, 157);
-            dataGridUser.Margin = new Padding(3, 4, 3, 4);
-            dataGridUser.Name = "dataGridUser";
-            dataGridUser.RowHeadersWidth = 51;
-            dataGridUser.Size = new Size(903, 490);
-            dataGridUser.TabIndex = 20;
+            DataGridDetail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DataGridDetail.BackgroundColor = Color.White;
+            DataGridDetail.BorderStyle = BorderStyle.None;
+            DataGridDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridDetail.Location = new Point(233, 157);
+            DataGridDetail.Margin = new Padding(3, 4, 3, 4);
+            DataGridDetail.Name = "DataGridDetail";
+            DataGridDetail.RowHeadersWidth = 51;
+            DataGridDetail.Size = new Size(903, 490);
+            DataGridDetail.TabIndex = 20;
             // 
             // bRefresh
             // 
@@ -101,6 +101,7 @@
             Back.Size = new Size(46, 24);
             Back.TabIndex = 49;
             Back.Text = "Back";
+            Back.Click += Back_Click;
             // 
             // DsbDetailPeminjaman
             // 
@@ -109,19 +110,20 @@
             ClientSize = new Size(1177, 829);
             Controls.Add(Back);
             Controls.Add(bRefresh);
-            Controls.Add(dataGridUser);
+            Controls.Add(DataGridDetail);
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DsbDetailPeminjaman";
             Text = "DsbDetailPeminjaman";
-            ((System.ComponentModel.ISupportInitialize)dataGridUser).EndInit();
+            Load += DsbDetailPeminjaman_Load;
+            ((System.ComponentModel.ISupportInitialize)DataGridDetail).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridUser;
+        private DataGridView DataGridDetail;
         private Button bRefresh;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;

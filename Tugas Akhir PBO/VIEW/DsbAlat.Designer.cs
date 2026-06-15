@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbAlat));
-            dataGridView2 = new DataGridView();
+            DataAlats = new DataGridView();
             bRefresh = new Button();
             button1 = new Button();
             button2 = new Button();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             Back = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataAlats).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView2
+            // DataAlats
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.BackgroundColor = Color.White;
-            dataGridView2.BorderStyle = BorderStyle.None;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(229, 132);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(911, 383);
-            dataGridView2.TabIndex = 28;
+            DataAlats.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DataAlats.BackgroundColor = Color.White;
+            DataAlats.BorderStyle = BorderStyle.None;
+            DataAlats.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataAlats.Location = new Point(229, 132);
+            DataAlats.Margin = new Padding(3, 4, 3, 4);
+            DataAlats.Name = "DataAlats";
+            DataAlats.RowHeadersWidth = 51;
+            DataAlats.Size = new Size(911, 383);
+            DataAlats.TabIndex = 28;
             // 
             // bRefresh
             // 
@@ -67,6 +67,7 @@
             bRefresh.Size = new Size(112, 39);
             bRefresh.TabIndex = 29;
             bRefresh.UseVisualStyleBackColor = false;
+            bRefresh.Click += bRefresh_Click;
             // 
             // button1
             // 
@@ -132,6 +133,7 @@
             Back.Size = new Size(46, 24);
             Back.TabIndex = 48;
             Back.Text = "Back";
+            Back.Click += Back_Click;
             // 
             // DsbAlat
             // 
@@ -142,19 +144,19 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(bRefresh);
-            Controls.Add(dataGridView2);
+            Controls.Add(DataAlats);
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DsbAlat";
             Text = "Barang";
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataAlats).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView2;
+        private DataGridView DataAlats;
         private Button bRefresh;
         private Button button1;
         private Button button2;

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using Tugas_Akhir_PBO.CONTROLLER;
 
 namespace Tugas_Akhir_PBO.Models;
 
@@ -18,6 +20,31 @@ public partial class Jadwal
     public virtual Alat? IdAlatNavigation { get; set; }
 
     public virtual Peminjaman? IdPeminjamanNavigation { get; set; }
+
+    public List<Object> getJadwalJoin(string role)
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            var query = db.Jadwals
+                .Include(j => j.IdPeminjamanNavigation)
+                .Select(j => new
+                {
+                    NamaUser = (j.IdPeminjamanNavigation != null && j.IdPeminjamanNavigation.IdUserNavigation != null)
+                        ? j.IdPeminjamanNavigation.IdUserNavigation.Nama
+                        : "",
+                    TanggalMulai = j.TanggalMulai,
+                    TanggalKembali = j.TanggalSelesai,
+                    IdPeminjaman = j.IdPeminjaman ?? ""
+                });
+
+            if (role != "Admin")
+            {
+                query = query.Where(j => j.NamaUser == UserSession.Username);
+            }
+
+            return query.ToList().Cast<object>().ToList();
+        }
+    }
 
     public Jadwal getDetailPeminjaman(string IdPeminjaman)
     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Tugas_Akhir_PBO.CONTROLLER;
 
 namespace Tugas_Akhir_PBO.Models;
 
@@ -39,6 +40,32 @@ public partial class Riwayat
             return db.Riwayats.Find(idRiwayat);
         }
     }
+
+    public List<Object> getRiwayatJoin(string role)
+        {
+            using (var db = new TugasAkhirPboContext())
+            {
+                var query = db.Riwayats
+                    .Include(r => r.IdUserNavigation)
+                    .Include(r => r.IdPeminjamanNavigation)
+                    .Include(r => r.IdPengembalianNavigation)
+                    .Select(r => new
+                    {
+                        NamaUser = r.IdUserNavigation.Nama,
+                        IdPeminjaman = r.IdPeminjaman ?? "",
+                        TanggalMulai = r.IdPeminjamanNavigation != null ? r.IdPeminjamanNavigation.TanggalPeminjaman ?? "" : "",
+                        TanggalKembali = r.IdPengembalianNavigation != null && r.IdPengembalianNavigation.TanggalPengembalian != null ? r.IdPengembalianNavigation.TanggalPengembalian.Value.ToString("yyyy-MM-dd") : "",
+                        Alat = r.IdPeminjamanNavigation != null ? r.IdPeminjamanNavigation.DetailPeminjaman : ""
+                    });
+
+            if (role != "Admin")
+                {
+                    query = query.Where(r => r.NamaUser == UserSession.Username);
+                }
+
+                return query.ToList().Cast<object>().ToList();
+            }
+        }
 
     public void inputRiwayat(string IdRiwayat, string IdUser, string IdPengembalian, string Peminjaman)
     {

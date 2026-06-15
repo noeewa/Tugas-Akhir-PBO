@@ -80,7 +80,6 @@ namespace Tugas_Akhir_PBO.VIEW
                 {
                     using (var db = new TugasAkhirPboContext())
                     {
-                        // Generate Peminjaman ID
                         var allPmjs = db.Peminjamen.Select(p => p.IdPeminjaman).ToList();
                         List<int> pmjNumbers = new List<int>();
                         foreach (var id in allPmjs)
@@ -98,8 +97,6 @@ namespace Tugas_Akhir_PBO.VIEW
                             nextPmjNum++;
                         }
                         string newIdPeminjaman = "PMJ-" + nextPmjNum.ToString("D3");
-
-                        // Create Peminjaman object
                         string detail = string.Join(", ", list_alat.Select(a => a.NamaAlat));
                         Peminjaman peminjaman = new Peminjaman()
                         {
@@ -110,8 +107,6 @@ namespace Tugas_Akhir_PBO.VIEW
                             TanggalKembali = DateEndPick.Value.ToString("yyyy-MM-dd")
                         };
                         db.Peminjamen.Add(peminjaman);
-
-                        // Generate Jadwal IDs sequentially
                         var allJdws = db.Jadwals.Select(j => j.IdJadwal).ToList();
                         List<int> jdwNumbers = new List<int>();
                         foreach (var id in allJdws)
@@ -129,10 +124,8 @@ namespace Tugas_Akhir_PBO.VIEW
                             nextJdwNum++;
                         }
 
-                        // Add Jadwal for each Alat and update its status
                         foreach (var selectedAlat in list_alat)
                         {
-                            // Create Jadwal
                             string newIdJadwal = "JDW-" + nextJdwNum.ToString("D3");
                             nextJdwNum++;
 
@@ -145,8 +138,6 @@ namespace Tugas_Akhir_PBO.VIEW
                                 IdPeminjaman = newIdPeminjaman
                             };
                             db.Jadwals.Add(jadwal);
-
-                            // Update Alat status to true (borrowed)
                             var alatToUpdate = db.Alats.Find(selectedAlat.IdAlat);
                             if (alatToUpdate != null)
                             {
@@ -169,7 +160,6 @@ namespace Tugas_Akhir_PBO.VIEW
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Hapus dari list pinjam
             if (AlatListBox.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Pilih alat yang ingin dihapus dari daftar pinjam terlebih dahulu!");
