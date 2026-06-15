@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tugas_Akhir_PBO.Models;
 
@@ -23,7 +24,11 @@ public partial class Riwayat
     {
         using (var db = new TugasAkhirPboContext())
         {
-            return db.Riwayats.ToList();
+            return db.Riwayats
+                .Include(r => r.IdPeminjamanNavigation)
+                .Include(r => r.IdPengembalianNavigation)
+                .Include(r => r.IdUserNavigation)
+                .ToList();
         }
     }
 

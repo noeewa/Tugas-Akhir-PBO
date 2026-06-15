@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tugas_Akhir_PBO.Models;
 
@@ -18,6 +20,16 @@ public partial class Pengembalian
     public virtual Peminjaman? IdPeminjamanNavigation { get; set; }
 
     public virtual ICollection<Riwayat> Riwayats { get; set; } = new List<Riwayat>();
+
+    public List<Pengembalian> GetAllPengembalianWithPeminjaman()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            return db.Pengembalians
+                .Include(p => p.IdPeminjamanNavigation)
+                .ToList();
+        }
+    }
 
     public List<Pengembalian> GetAllPengembalian()
     {

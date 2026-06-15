@@ -27,12 +27,12 @@ public partial class Mitra : Abstract_User
             db.Mitras.Add(this);
         }
     }
-
-    public List<Mitra> GetAllMitra()
+    public override List<Object> getAllData()
     {
         using (var db = new TugasAkhirPboContext())
         {
-            return db.Mitras.ToList();
+            var mitra = db.Mitras.Select(a => (object)a).ToList();
+            return mitra;
         }
     }
     public int GetMitraID()

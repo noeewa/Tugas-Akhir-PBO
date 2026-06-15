@@ -14,6 +14,14 @@ namespace Tugas_Akhir_PBO.Models
 
         private string? Kontak { get; set; }
 
-        public abstract void insert();
+        public virtual void insert()
+        {
+            Console.WriteLine("Tidak ada");
+        }
+
+        public virtual List<Object> getAllData()
+        {
+            return null;
+        }
     }
 }

@@ -96,7 +96,7 @@
             Back.AutoSize = true;
             Back.BackColor = SystemColors.ButtonHighlight;
             Back.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Back.Location = new Point(1111, 12);
+            Back.Location = new Point(1119, 60);
             Back.Name = "Back";
             Back.Size = new Size(46, 24);
             Back.TabIndex = 49;

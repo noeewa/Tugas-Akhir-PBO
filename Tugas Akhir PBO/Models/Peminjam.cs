@@ -23,6 +23,15 @@ public partial class Peminjam : Abstract_User
         }
     }
 
+    public override List<Object> getAllData()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            var peminjam = db.Peminjams.Select(a => (object)a).ToList();
+            return peminjam;
+        }
+    }
+
     public void inputPeminjam(string Nama, string Alamat, string Kontak)
     {
         using (var db = new TugasAkhirPboContext())

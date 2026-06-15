@@ -32,9 +32,9 @@
             LoginButton = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            dataGridView2 = new DataGridView();
+            DataRiwayat = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataRiwayat).BeginInit();
             SuspendLayout();
             // 
             // LoginButton
@@ -80,18 +80,18 @@
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
             // 
-            // dataGridView2
+            // DataRiwayat
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.BackgroundColor = Color.White;
-            dataGridView2.BorderStyle = BorderStyle.None;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(229, 185);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(917, 428);
-            dataGridView2.TabIndex = 28;
+            DataRiwayat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DataRiwayat.BackgroundColor = Color.White;
+            DataRiwayat.BorderStyle = BorderStyle.None;
+            DataRiwayat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataRiwayat.Location = new Point(229, 185);
+            DataRiwayat.Margin = new Padding(3, 4, 3, 4);
+            DataRiwayat.Name = "DataRiwayat";
+            DataRiwayat.RowHeadersWidth = 51;
+            DataRiwayat.Size = new Size(917, 372);
+            DataRiwayat.TabIndex = 28;
             // 
             // DsbRiwayat
             // 
@@ -100,13 +100,13 @@
             ClientSize = new Size(1177, 859);
             Controls.Add(button1);
             Controls.Add(LoginButton);
-            Controls.Add(dataGridView2);
+            Controls.Add(DataRiwayat);
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DsbRiwayat";
             Text = "Riwayat";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataRiwayat).EndInit();
             ResumeLayout(false);
         }
 
@@ -114,6 +114,6 @@
         private Button LoginButton;
         private Button button1;
         private PictureBox pictureBox1;
-        private DataGridView dataGridView2;
+        private DataGridView DataRiwayat;
     }
 }

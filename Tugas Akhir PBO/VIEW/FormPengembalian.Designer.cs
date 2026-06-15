@@ -39,6 +39,8 @@
             LoginButton = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            textBoxKondisi = new TextBox();
+            labelKondisi = new Label();
             ((System.ComponentModel.ISupportInitialize)dataListAlat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -106,7 +108,7 @@
             dataListAlat.Margin = new Padding(3, 4, 3, 4);
             dataListAlat.Name = "dataListAlat";
             dataListAlat.RowHeadersWidth = 51;
-            dataListAlat.Size = new Size(887, 180);
+            dataListAlat.Size = new Size(887, 130);
             dataListAlat.TabIndex = 31;
             // 
             // LoginButton
@@ -119,6 +121,7 @@
             LoginButton.TabIndex = 33;
             LoginButton.Text = "Ajukan";
             LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.Click += LoginButton_Click;
             // 
             // button1
             // 
@@ -143,12 +146,31 @@
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
             // 
+            // textBoxKondisi
+            // 
+            textBoxKondisi.Location = new Point(618, 372);
+            textBoxKondisi.Name = "textBoxKondisi";
+            textBoxKondisi.Size = new Size(250, 27);
+            textBoxKondisi.TabIndex = 36;
+            // 
+            // labelKondisi
+            // 
+            labelKondisi.AutoSize = true;
+            labelKondisi.BackColor = Color.White;
+            labelKondisi.Location = new Point(500, 375);
+            labelKondisi.Name = "labelKondisi";
+            labelKondisi.Size = new Size(96, 20);
+            labelKondisi.TabIndex = 37;
+            labelKondisi.Text = "Kondisi Alat :";
+            // 
             // FormPengembalian
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
             Controls.Add(pictureBox1);
+            Controls.Add(textBoxKondisi);
+            Controls.Add(labelKondisi);
             Controls.Add(button1);
             Controls.Add(LoginButton);
             Controls.Add(label0);
@@ -175,5 +197,7 @@
         private Button LoginButton;
         private Button button1;
         private PictureBox pictureBox1;
+        private TextBox textBoxKondisi;
+        private Label labelKondisi;
     }
 }

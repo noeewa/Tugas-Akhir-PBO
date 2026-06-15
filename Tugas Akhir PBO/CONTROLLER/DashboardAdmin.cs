@@ -12,9 +12,9 @@ namespace Tugas_Akhir_PBO.CONTROLLER
         {
             return new User().GetAllUserAdmin();
         }
-        public static List<Mitra> getMitra()
+        public static List<Object> getMitra()
         {
-            return new Mitra().GetAllMitra();
+            return new Mitra().getAllData();
         }
         public static void DelUser(string idUser)
         {

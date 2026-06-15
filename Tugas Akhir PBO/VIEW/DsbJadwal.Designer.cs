@@ -34,6 +34,7 @@
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
+            Back = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -107,11 +108,24 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // Back
+            // 
+            Back.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Back.AutoSize = true;
+            Back.BackColor = SystemColors.ButtonHighlight;
+            Back.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Back.Location = new Point(1119, 148);
+            Back.Name = "Back";
+            Back.Size = new Size(46, 24);
+            Back.TabIndex = 50;
+            Back.Text = "Back";
+            // 
             // DsbJadwal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1177, 999);
+            Controls.Add(Back);
             Controls.Add(button1);
             Controls.Add(bRefresh);
             Controls.Add(dataGridUser);
@@ -122,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -130,5 +145,6 @@
         private Button button1;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
+        private Label Back;
     }
 }

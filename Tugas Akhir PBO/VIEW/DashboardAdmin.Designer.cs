@@ -36,11 +36,11 @@
             DeleteUserButton = new Button();
             HapusMitra = new Button();
             DaftarMitra = new Button();
-            LabelLinkBarang = new LinkLabel();
+            labelAlat = new LinkLabel();
             LabelLinkPeminjaman = new LinkLabel();
-            linkLabel1 = new LinkLabel();
+            labelRiwayat = new LinkLabel();
             linkLabel2 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
+            labelPengembalian = new LinkLabel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
@@ -145,21 +145,21 @@
             DaftarMitra.UseVisualStyleBackColor = true;
             DaftarMitra.Click += DaftarMitra_Click;
             // 
-            // LabelLinkBarang
+            // labelAlat
             // 
-            LabelLinkBarang.AutoSize = true;
-            LabelLinkBarang.BackColor = Color.FromArgb(0, 64, 0);
-            LabelLinkBarang.DisabledLinkColor = Color.White;
-            LabelLinkBarang.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelLinkBarang.LinkColor = Color.White;
-            LabelLinkBarang.Location = new Point(14, 104);
-            LabelLinkBarang.Margin = new Padding(5, 0, 5, 0);
-            LabelLinkBarang.Name = "LabelLinkBarang";
-            LabelLinkBarang.Size = new Size(33, 18);
-            LabelLinkBarang.TabIndex = 10;
-            LabelLinkBarang.TabStop = true;
-            LabelLinkBarang.Text = "Alat";
-            LabelLinkBarang.LinkClicked += LabelLinkBarang_LinkClicked;
+            labelAlat.AutoSize = true;
+            labelAlat.BackColor = Color.FromArgb(0, 64, 0);
+            labelAlat.DisabledLinkColor = Color.White;
+            labelAlat.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelAlat.LinkColor = Color.White;
+            labelAlat.Location = new Point(14, 104);
+            labelAlat.Margin = new Padding(5, 0, 5, 0);
+            labelAlat.Name = "labelAlat";
+            labelAlat.Size = new Size(33, 18);
+            labelAlat.TabIndex = 10;
+            labelAlat.TabStop = true;
+            labelAlat.Text = "Alat";
+            labelAlat.LinkClicked += labelAlat_LinkClicked;
             // 
             // LabelLinkPeminjaman
             // 
@@ -175,22 +175,23 @@
             LabelLinkPeminjaman.TabIndex = 11;
             LabelLinkPeminjaman.TabStop = true;
             LabelLinkPeminjaman.Text = "Peminjaman";
-            LabelLinkPeminjaman.LinkClicked += LabelLinkPeminjaman_LinkClicked;
+            LabelLinkPeminjaman.LinkClicked += LinkLabelPeminjaman_LinkClicked;
             // 
-            // linkLabel1
+            // labelRiwayat
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.FromArgb(0, 64, 0);
-            linkLabel1.DisabledLinkColor = Color.White;
-            linkLabel1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(15, 220);
-            linkLabel1.Margin = new Padding(5, 0, 5, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(57, 18);
-            linkLabel1.TabIndex = 12;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Riwayat";
+            labelRiwayat.AutoSize = true;
+            labelRiwayat.BackColor = Color.FromArgb(0, 64, 0);
+            labelRiwayat.DisabledLinkColor = Color.White;
+            labelRiwayat.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelRiwayat.LinkColor = Color.White;
+            labelRiwayat.Location = new Point(15, 220);
+            labelRiwayat.Margin = new Padding(5, 0, 5, 0);
+            labelRiwayat.Name = "labelRiwayat";
+            labelRiwayat.Size = new Size(57, 18);
+            labelRiwayat.TabIndex = 12;
+            labelRiwayat.TabStop = true;
+            labelRiwayat.Text = "Riwayat";
+            labelRiwayat.LinkClicked += labelRiwayat_LinkClicked;
             // 
             // linkLabel2
             // 
@@ -200,22 +201,22 @@
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(0, 20);
             linkLabel2.TabIndex = 13;
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
-            // linkLabel4
+            // labelPengembalian
             // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.BackColor = Color.FromArgb(0, 64, 0);
-            linkLabel4.DisabledLinkColor = Color.White;
-            linkLabel4.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel4.LinkColor = Color.White;
-            linkLabel4.Location = new Point(15, 179);
-            linkLabel4.Margin = new Padding(5, 0, 5, 0);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(97, 18);
-            linkLabel4.TabIndex = 15;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "Pengembalian";
+            labelPengembalian.AutoSize = true;
+            labelPengembalian.BackColor = Color.FromArgb(0, 64, 0);
+            labelPengembalian.DisabledLinkColor = Color.White;
+            labelPengembalian.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelPengembalian.LinkColor = Color.White;
+            labelPengembalian.Location = new Point(15, 179);
+            labelPengembalian.Margin = new Padding(5, 0, 5, 0);
+            labelPengembalian.Name = "labelPengembalian";
+            labelPengembalian.Size = new Size(97, 18);
+            labelPengembalian.TabIndex = 15;
+            labelPengembalian.TabStop = true;
+            labelPengembalian.Text = "Pengembalian";
+            labelPengembalian.LinkClicked += labelPengembalian_LinkClicked;
             // 
             // pictureBox1
             // 
@@ -241,7 +242,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 36;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // DashboardAdmin
             // 
@@ -249,9 +249,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1030, 659);
-            Controls.Add(linkLabel1);
-            Controls.Add(linkLabel4);
-            Controls.Add(LabelLinkBarang);
+            Controls.Add(labelRiwayat);
+            Controls.Add(labelPengembalian);
+            Controls.Add(labelAlat);
             Controls.Add(LabelLinkPeminjaman);
             Controls.Add(pictureBox1);
             Controls.Add(linkLabel2);
@@ -283,11 +283,11 @@
         private Button DeleteUserButton;
         private Button HapusMitra;
         private Button DaftarMitra;
-        private LinkLabel LabelLinkBarang;
+        private LinkLabel labelAlat;
         private LinkLabel LabelLinkPeminjaman;
-        private LinkLabel linkLabel1;
+        private LinkLabel labelRiwayat;
         private LinkLabel linkLabel2;
-        private LinkLabel linkLabel4;
+        private LinkLabel labelPengembalian;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
     }

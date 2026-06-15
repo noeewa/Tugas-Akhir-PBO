@@ -24,12 +24,21 @@ public partial class Admin : Abstract_User
             db.Admins.Add(this);
         }
     }
+
+    public override List<Object> getAllData()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            var admin = db.Admins.Select(a => (object)a).ToList();
+            return admin;
+        }
+    }
     public Admin getAdmin(int id)
     {
         using (var db = new TugasAkhirPboContext())
         {
-            Admin user = db.Admins.Find(id);
-            return user;
+            Admin admin = db.Admins.Find(id);
+            return admin;
         }
     }
 }

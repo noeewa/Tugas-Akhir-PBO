@@ -14,7 +14,6 @@ namespace Tugas_Akhir_PBO.VIEW
     {
         public DashboardAdmin()
         {
-
             try
             {
                 InitializeComponent();
@@ -32,17 +31,42 @@ namespace Tugas_Akhir_PBO.VIEW
 
         private void LabelLinkBarang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            if (new DsbProsesPengembalian().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabelPeminjaman_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            if (new DsbJadwal().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
 
-        private void UserAdminLabel_Click(object sender, EventArgs e)
+        private void labelAlat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (new DsbAlat().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
+        }
 
+        private void labelRiwayat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (new DsbRiwayat().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
+        }
+
+        private void labelPengembalian_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (new DsbProsesPengembalian().ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
 
         private void DashboardAdmin_Load(object sender, EventArgs e)
@@ -106,7 +130,6 @@ namespace Tugas_Akhir_PBO.VIEW
 
         private void DaftarMitra_Click(object sender, EventArgs e)
         {
-            //Ini Register Mitra
             FormDaftarMitra formDaftar = new FormDaftarMitra();
             if (formDaftar.ShowDialog() == DialogResult.OK)
             {
@@ -122,7 +145,6 @@ namespace Tugas_Akhir_PBO.VIEW
             {
                 DataGridViewRow barisPilihan = dataGridMitra.CurrentRow;
 
-                // The property is 'Id' in the anonymous object mapped to dataGridMitra
                 string idMitraStr = barisPilihan.Cells["Id"]?.Value?.ToString();
 
                 if (string.IsNullOrEmpty(idMitraStr) || !int.TryParse(idMitraStr, out int idMitra))
@@ -150,7 +172,6 @@ namespace Tugas_Akhir_PBO.VIEW
                         dataGridMitra.DataSource = null;
                         dataGridMitra.DataSource = ControllerAdmin.AdminGetMitra();
 
-                        // Refresh User grid too since the user's IdMitra is updated (set to null)
                         dataGridUser.DataSource = null;
                         dataGridUser.DataSource = ControllerAdmin.GetAllUserAdmin();
                     }
@@ -164,16 +185,6 @@ namespace Tugas_Akhir_PBO.VIEW
             {
                 MessageBox.Show("Silakan klik salah satu baris mitra di tabel terlebih dahulu!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void LabelLinkPeminjaman_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridMitra_CellContentClick(object sender, DataGridViewCellEventArgs e)

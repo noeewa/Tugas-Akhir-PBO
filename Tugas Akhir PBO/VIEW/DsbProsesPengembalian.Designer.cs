@@ -29,56 +29,58 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DsbProsesPengembalian));
-            dataGridView2 = new DataGridView();
-            dataGrid0 = new DataGridView();
-            bRefresh = new Button();
+            ListPengembalian = new DataGridView();
+            ListAlatBox = new DataGridView();
+            bKonfirmasi = new Button();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGrid0).BeginInit();
+            Back = new Label();
+            ((System.ComponentModel.ISupportInitialize)ListPengembalian).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ListAlatBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView2
+            // ListPengembalian
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            dataGridView2.BackgroundColor = Color.White;
-            dataGridView2.BorderStyle = BorderStyle.None;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(725, 183);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(418, 415);
-            dataGridView2.TabIndex = 30;
+            ListPengembalian.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            ListPengembalian.BackgroundColor = Color.White;
+            ListPengembalian.BorderStyle = BorderStyle.None;
+            ListPengembalian.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ListPengembalian.Location = new Point(725, 183);
+            ListPengembalian.Margin = new Padding(3, 4, 3, 4);
+            ListPengembalian.Name = "ListPengembalian";
+            ListPengembalian.RowHeadersWidth = 51;
+            ListPengembalian.Size = new Size(418, 415);
+            ListPengembalian.TabIndex = 30;
             // 
-            // dataGrid0
+            // ListAlatBox
             // 
-            dataGrid0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            dataGrid0.BackgroundColor = Color.White;
-            dataGrid0.BorderStyle = BorderStyle.None;
-            dataGrid0.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGrid0.Location = new Point(227, 183);
-            dataGrid0.Margin = new Padding(3, 4, 3, 4);
-            dataGrid0.Name = "dataGrid0";
-            dataGrid0.RowHeadersWidth = 51;
-            dataGrid0.Size = new Size(422, 415);
-            dataGrid0.TabIndex = 28;
+            ListAlatBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            ListAlatBox.BackgroundColor = Color.White;
+            ListAlatBox.BorderStyle = BorderStyle.None;
+            ListAlatBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ListAlatBox.Location = new Point(227, 183);
+            ListAlatBox.Margin = new Padding(3, 4, 3, 4);
+            ListAlatBox.Name = "ListAlatBox";
+            ListAlatBox.RowHeadersWidth = 51;
+            ListAlatBox.Size = new Size(422, 350);
+            ListAlatBox.TabIndex = 28;
             // 
-            // bRefresh
+            // bKonfirmasi
             // 
-            bRefresh.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            bRefresh.BackColor = Color.White;
-            bRefresh.BackgroundImage = (Image)resources.GetObject("bRefresh.BackgroundImage");
-            bRefresh.BackgroundImageLayout = ImageLayout.Zoom;
-            bRefresh.FlatAppearance.BorderSize = 0;
-            bRefresh.FlatStyle = FlatStyle.Flat;
-            bRefresh.Location = new Point(988, 714);
-            bRefresh.Margin = new Padding(3, 4, 3, 4);
-            bRefresh.Name = "bRefresh";
-            bRefresh.Size = new Size(143, 48);
-            bRefresh.TabIndex = 31;
-            bRefresh.UseVisualStyleBackColor = false;
+            bKonfirmasi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            bKonfirmasi.BackColor = Color.White;
+            bKonfirmasi.BackgroundImage = (Image)resources.GetObject("bKonfirmasi.BackgroundImage");
+            bKonfirmasi.BackgroundImageLayout = ImageLayout.Zoom;
+            bKonfirmasi.FlatAppearance.BorderSize = 0;
+            bKonfirmasi.FlatStyle = FlatStyle.Flat;
+            bKonfirmasi.Location = new Point(988, 714);
+            bKonfirmasi.Margin = new Padding(3, 4, 3, 4);
+            bKonfirmasi.Name = "bKonfirmasi";
+            bKonfirmasi.Size = new Size(143, 48);
+            bKonfirmasi.TabIndex = 31;
+            bKonfirmasi.UseVisualStyleBackColor = false;
+            bKonfirmasi.Click += bKonfirmasi_Click;
             // 
             // linkLabel1
             // 
@@ -86,10 +88,11 @@
             linkLabel1.BackColor = Color.White;
             linkLabel1.Location = new Point(390, 8);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(40, 20);
+            linkLabel1.Size = new Size(46, 20);
             linkLabel1.TabIndex = 31;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Back";
+            linkLabel1.LinkClicked += Back_Click;
             // 
             // pictureBox1
             // 
@@ -103,29 +106,45 @@
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
             // 
+            // Back
+            // 
+            Back.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Back.AutoSize = true;
+            Back.BackColor = SystemColors.ButtonHighlight;
+            Back.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Back.Location = new Point(1119, 77);
+            Back.Name = "Back";
+            Back.Size = new Size(46, 24);
+            Back.TabIndex = 50;
+            Back.Text = "Back";
+            Back.Click += Back_Click;
+            // 
             // DsbProsesPengembalian
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1177, 865);
-            Controls.Add(bRefresh);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGrid0);
+            Controls.Add(Back);
+            Controls.Add(bKonfirmasi);
+            Controls.Add(ListPengembalian);
+            Controls.Add(ListAlatBox);
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DsbProsesPengembalian";
             Text = "DsbProsesPengembalian";
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGrid0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ListPengembalian).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ListAlatBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView2;
-        private DataGridView dataGrid0;
-        private Button bRefresh;
+        private DataGridView ListPengembalian;
+        private DataGridView ListAlatBox;
+        private Button bKonfirmasi;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
+        private Label Back;
     }
 }
