@@ -113,7 +113,7 @@ namespace Tugas_Akhir_PBO.VIEW
                         foreach (var selectedAlat in list_alat)
                         {
                             string newIdJadwal = newJadwal.inputJadwal(
-                                idJadwal: "JADWAL01",
+                                idJadwal: null,
                                 idAlat: selectedAlat.IdAlat,
                                 tanggalMulai: DateOnly.FromDateTime(DateStartPick.Value),
                                 tanggalSelesai: DateOnly.FromDateTime(DateEndPick.Value),
