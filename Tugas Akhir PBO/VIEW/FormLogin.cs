@@ -24,18 +24,31 @@ namespace Tugas_Akhir_PBO
             }
 
             User user = UseController.formLogin(UsernameBox.Text, PasswordBox.Text);
-            if (user != null && string.IsNullOrEmpty(user.Nama))
-            {
-               
-                MessageBox.Show($"username: {user.Nama}");
-            }
             if (user == null)
             {
                 MessageBox.Show("Username atau password salah!");
                 return;
             }
 
-            MessageBox.Show("Selamat datang, " + user.Nama);
+            if (user.IdAdmin > 0)
+            {
+                UserSession.UserId = user.Id;
+                UserSession.Username = user.Nama;
+                UserSession.IdAdmin = user.IdAdmin;
+            }
+            else if (user.IdMitra > 0)
+            {
+                UserSession.UserId = user.Id;
+                UserSession.Username = user.Nama;
+                UserSession.IdMitra = user.IdMitra;
+            }
+            else if (user.IdPeminjam > 0)
+            {
+                UserSession.UserId = user.Id;
+                UserSession.Username = user.Nama;
+                UserSession.IdPeminjam = user.IdPeminjam;
+            }
+
             this.Hide();
 
             if (user.IdAdmin > 0)
@@ -45,6 +58,7 @@ namespace Tugas_Akhir_PBO
             else if (user.IdPeminjam > 0)
                 new DashboardPeminjam().ShowDialog();
 
+            UserSession.Clear();
             this.Close();
         }
 

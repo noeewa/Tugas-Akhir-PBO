@@ -31,7 +31,7 @@ namespace Tugas_Akhir_PBO.CONTROLLER
         }
         public static void DelMitra(int idMitra)
         {
-            // Update users status back to peminjam (set IdMitra = null)
+
             using (var db = new TugasAkhirPboContext())
             {
                 var users = db.Users.Where(u => u.IdMitra == idMitra).ToList();

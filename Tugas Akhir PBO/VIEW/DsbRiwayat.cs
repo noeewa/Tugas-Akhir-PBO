@@ -39,5 +39,11 @@ namespace Tugas_Akhir_PBO.VIEW
         {
             loadRiwayat();
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

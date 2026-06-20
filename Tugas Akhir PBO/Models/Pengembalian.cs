@@ -27,6 +27,24 @@ public partial class Pengembalian
         {
             return db.Pengembalians
                 .Include(p => p.IdPeminjamanNavigation)
+                .Include(p => p.Riwayats)
+                .ToList();
+        }
+    }
+
+    public List<Pengembalian> GetAllPengembalianWithPeminjamanConfirmed()
+    {
+        using (var db = new TugasAkhirPboContext())
+        {
+            var pengembalianIds = db.Riwayats
+                .Where(r => r.IdPengembalian != null)
+                .Select(r => r.IdPengembalian)
+                .Distinct()
+                .ToList();
+
+            return db.Pengembalians
+                .Include(p => p.IdPeminjamanNavigation)
+                .Where(p => !pengembalianIds.Contains(p.IdPengembalian))
                 .ToList();
         }
     }

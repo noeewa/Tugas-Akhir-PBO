@@ -17,6 +17,11 @@ namespace Tugas_Akhir_PBO.VIEW
             try
             {
                 InitializeComponent();
+                if (string.IsNullOrEmpty(UserSession.UserId))
+                {
+                    this.Close();
+                    return;
+                }
                 dataGridUser.DataSource = ControllerAdmin.getUser();
                 dataGridUser.AutoGenerateColumns = false;
                 dataGridMitra.DataSource = ControllerAdmin.AdminGetMitra();
@@ -190,6 +195,17 @@ namespace Tugas_Akhir_PBO.VIEW
         private void dataGridMitra_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Logut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+            this.Hide();
+            using (FormLogin formLogin = new FormLogin())
+            {
+                formLogin.ShowDialog();
+            }
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

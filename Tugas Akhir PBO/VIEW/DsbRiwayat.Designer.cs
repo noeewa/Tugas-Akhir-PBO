@@ -33,6 +33,7 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             DataRiwayat = new DataGridView();
+            Back = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DataRiwayat).BeginInit();
             SuspendLayout();
@@ -94,11 +95,25 @@
             DataRiwayat.Size = new Size(917, 372);
             DataRiwayat.TabIndex = 28;
             // 
+            // Back
+            // 
+            Back.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Back.AutoSize = true;
+            Back.BackColor = SystemColors.ButtonHighlight;
+            Back.Font = new Font("Inter Tight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Back.Location = new Point(1100, 76);
+            Back.Name = "Back";
+            Back.Size = new Size(46, 24);
+            Back.TabIndex = 51;
+            Back.Text = "Back";
+            Back.Click += Back_Click;
+            // 
             // DsbRiwayat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1177, 859);
+            Controls.Add(Back);
             Controls.Add(button1);
             Controls.Add(LoginButton);
             Controls.Add(DataRiwayat);
@@ -109,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)DataRiwayat).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -116,5 +132,6 @@
         private Button button1;
         private PictureBox pictureBox1;
         private DataGridView DataRiwayat;
+        private Label Back;
     }
 }

@@ -19,6 +19,11 @@ namespace Tugas_Akhir_PBO.VIEW
             try
             {
                 InitializeComponent();
+                if (string.IsNullOrEmpty(UserSession.UserId))
+                {
+                    this.Close();
+                    return;
+                }
                 dataGridPeminjam.AutoGenerateColumns = true;
                 dataGridPeminjam.DataSource = null;
                 dataGridPeminjam.DataSource = new ControllerPeminjam().getJadwal();
@@ -64,6 +69,17 @@ namespace Tugas_Akhir_PBO.VIEW
                 dataGridPeminjam.DataSource = new ControllerPeminjam().getJadwal();
                 this.Show();
             }
+        }
+
+        private void Logut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+            this.Hide();
+            using (FormLogin formLogin = new FormLogin())
+            {
+                formLogin.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

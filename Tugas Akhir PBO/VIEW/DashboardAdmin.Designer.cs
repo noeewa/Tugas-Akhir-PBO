@@ -43,6 +43,7 @@
             labelPengembalian = new LinkLabel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            Logut = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridMitra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -243,12 +244,25 @@
             pictureBox2.TabIndex = 36;
             pictureBox2.TabStop = false;
             // 
+            // Logut
+            // 
+            Logut.AutoSize = true;
+            Logut.BackColor = Color.White;
+            Logut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Logut.Location = new Point(950, 16);
+            Logut.Name = "Logut";
+            Logut.Size = new Size(50, 20);
+            Logut.TabIndex = 37;
+            Logut.Text = "Logut";
+            Logut.Click += Logut_Click;
+            // 
             // DashboardAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1030, 659);
+            Controls.Add(Logut);
             Controls.Add(labelRiwayat);
             Controls.Add(labelPengembalian);
             Controls.Add(labelAlat);
@@ -290,5 +304,6 @@
         private LinkLabel labelPengembalian;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Label Logut;
     }
 }

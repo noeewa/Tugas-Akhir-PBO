@@ -94,10 +94,10 @@
             LoginButton.BackgroundImageLayout = ImageLayout.Zoom;
             LoginButton.FlatAppearance.BorderSize = 0;
             LoginButton.FlatStyle = FlatStyle.Flat;
-            LoginButton.Location = new Point(817, 539);
+            LoginButton.Location = new Point(863, 539);
             LoginButton.Margin = new Padding(5, 3, 5, 3);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(190, 43);
+            LoginButton.Size = new Size(137, 31);
             LoginButton.TabIndex = 5;
             LoginButton.UseVisualStyleBackColor = false;
             LoginButton.Click += LoginButton_Click;
@@ -110,10 +110,10 @@
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(702, 539);
+            button1.Location = new Point(717, 539);
             button1.Margin = new Padding(5, 3, 5, 3);
             button1.Name = "button1";
-            button1.Size = new Size(94, 43);
+            button1.Size = new Size(72, 31);
             button1.TabIndex = 6;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;

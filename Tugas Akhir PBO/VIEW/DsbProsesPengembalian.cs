@@ -21,7 +21,7 @@ namespace Tugas_Akhir_PBO.VIEW
 
         public void loadPengembalian()
         {
-            ListPengembalian.DataSource = new Pengembalian().GetAllPengembalianWithPeminjaman();
+            ListPengembalian.DataSource = new Pengembalian().GetAllPengembalianWithPeminjamanConfirmed();
             ListAlatBox.DataSource = new Alat().GetAlatByStatus();
         }
 
