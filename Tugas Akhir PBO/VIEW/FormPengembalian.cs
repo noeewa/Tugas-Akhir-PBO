@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using Tugas_Akhir_PBO.CONTROLLER;
 using Tugas_Akhir_PBO.Models;
 
@@ -45,6 +46,20 @@ namespace Tugas_Akhir_PBO.VIEW
 
             DataGridViewRow row = dataListAlat.SelectedRows[0];
             Peminjaman peminjaman = (Peminjaman)row.DataBoundItem;
+
+            using (var db = new TugasAkhirPboContext())
+            {
+                var peminjamanCek = db.Peminjamen
+                    .Include(p => p.Pengembalian)
+                    .FirstOrDefault(p => p.IdPeminjaman == peminjaman.IdPeminjaman);
+
+                if (peminjamanCek?.Pengembalian != null)
+                {
+                    MessageBox.Show("Peminjaman ini sudah pernah dikembalikan!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             string kondisiAlat = string.IsNullOrWhiteSpace(textBoxKondisi.Text) ? "Tidak diketahui" : textBoxKondisi.Text.Trim();
             DateOnly tanggalPengembalian = DateOnly.FromDateTime(dateTimePicker1.Value.Date);
             string hariKembali = peminjaman.TanggalKembali ?? "";

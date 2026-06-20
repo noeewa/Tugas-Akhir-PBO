@@ -37,6 +37,7 @@ namespace Tugas_Akhir_PBO.VIEW
             linkLabel1 = new LinkLabel();
             LabelLinkPeminjaman = new LinkLabel();
             pictureBox1 = new PictureBox();
+            Logut = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridAlat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -154,11 +155,24 @@ namespace Tugas_Akhir_PBO.VIEW
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // Logut
+            // 
+            Logut.AutoSize = true;
+            Logut.BackColor = Color.White;
+            Logut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Logut.Location = new Point(1099, 36);
+            Logut.Name = "Logut";
+            Logut.Size = new Size(50, 20);
+            Logut.TabIndex = 49;
+            Logut.Text = "Logut";
+            Logut.Click += Logut_Click;
+            // 
             // DashboardMitra
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1177, 775);
+            Controls.Add(Logut);
             Controls.Add(linkLabel1);
             Controls.Add(LabelLinkPeminjaman);
             Controls.Add(button1);
@@ -186,5 +200,6 @@ namespace Tugas_Akhir_PBO.VIEW
         private LinkLabel linkLabel1;
         private LinkLabel LabelLinkPeminjaman;
         private PictureBox pictureBox1;
+        private Label Logut;
     }
 }

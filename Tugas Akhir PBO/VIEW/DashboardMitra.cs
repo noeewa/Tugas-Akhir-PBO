@@ -13,17 +13,21 @@ namespace Tugas_Akhir_PBO.VIEW
     {
         public DashboardMitra()
         {
-
             try
             {
                 InitializeComponent();
+                if (string.IsNullOrEmpty(UserSession.UserId))
+                {
+                    this.Close();
+                    return;
+                }
                 dataGridAlat.DataSource = null;
                 dataGridAlat.DataSource = new ControllerMitra().GetAllAlat();
             }
-            catch (IOException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                Application.Exit();
+                MessageBox.Show("Gagal memuat data dashboard mitra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -82,6 +86,17 @@ namespace Tugas_Akhir_PBO.VIEW
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Logut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+            this.Hide();
+            using (FormLogin formLogin = new FormLogin())
+            {
+                formLogin.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

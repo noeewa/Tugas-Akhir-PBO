@@ -52,7 +52,6 @@ namespace Tugas_Akhir_PBO.CONTROLLER
             return userRegis;
         }
 
-
         public static Admin TabelAdmin(int id_admin)
         {
             Admin admin = new Admin();

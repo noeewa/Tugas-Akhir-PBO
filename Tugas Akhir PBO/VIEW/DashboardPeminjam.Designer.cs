@@ -36,6 +36,7 @@
             linkLabel3 = new LinkLabel();
             linkLabel5 = new LinkLabel();
             pictureBox1 = new PictureBox();
+            Logut = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridPeminjam).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -140,11 +141,24 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // Logut
+            // 
+            Logut.AutoSize = true;
+            Logut.BackColor = Color.White;
+            Logut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Logut.Location = new Point(1115, 55);
+            Logut.Name = "Logut";
+            Logut.Size = new Size(50, 20);
+            Logut.TabIndex = 49;
+            Logut.Text = "Logut";
+            Logut.Click += Logut_Click;
+            // 
             // DashboardPeminjam
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1177, 816);
+            Controls.Add(Logut);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel5);
             Controls.Add(bPengembalian);
@@ -169,5 +183,6 @@
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel5;
         private PictureBox pictureBox1;
+        private Label Logut;
     }
 }

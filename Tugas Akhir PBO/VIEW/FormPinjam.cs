@@ -109,16 +109,35 @@ namespace Tugas_Akhir_PBO.VIEW
                         };
                         db.Peminjamen.Add(peminjaman);
 
-                        var newJadwal = new Jadwal();
+                        var allJadwalIds = db.Jadwals.Select(j => j.IdJadwal).ToList();
+                        List<int> jadwalNums = new List<int>();
+                        foreach (var id in allJadwalIds)
+                        {
+                            if (!string.IsNullOrEmpty(id) && id.StartsWith("JDW-") && int.TryParse(id.Substring(4), out int num))
+                                jadwalNums.Add(num);
+                        }
+                        jadwalNums.Sort();
+                        int nextJdwNum = 0;
+                        foreach (int n in jadwalNums)
+                        {
+                            if (n != nextJdwNum) break;
+                            nextJdwNum++;
+                        }
+
                         foreach (var selectedAlat in list_alat)
                         {
-                            string newIdJadwal = newJadwal.inputJadwal(
-                                idJadwal: null,
-                                idAlat: selectedAlat.IdAlat,
-                                tanggalMulai: DateOnly.FromDateTime(DateStartPick.Value),
-                                tanggalSelesai: DateOnly.FromDateTime(DateEndPick.Value),
-                                idPeminjaman: newIdPeminjaman
-                            ).IdJadwal;
+                            string newIdJadwal = "JDW-" + nextJdwNum.ToString("D3");
+                            nextJdwNum++;
+
+                            Jadwal jadwal = new Jadwal()
+                            {
+                                IdJadwal = newIdJadwal,
+                                IdAlat = selectedAlat.IdAlat,
+                                TanggalMulai = DateOnly.FromDateTime(DateStartPick.Value),
+                                TanggalSelesai = DateOnly.FromDateTime(DateEndPick.Value),
+                                IdPeminjaman = newIdPeminjaman
+                            };
+                            db.Jadwals.Add(jadwal);
 
                             var alatToUpdate = db.Alats.Find(selectedAlat.IdAlat);
                             if (alatToUpdate != null)
@@ -135,7 +154,7 @@ namespace Tugas_Akhir_PBO.VIEW
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Terjadi kesalahan saat menyimpan data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Terjadi kesalahan saat menyimpan data: {ex.InnerException?.Message ?? ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
